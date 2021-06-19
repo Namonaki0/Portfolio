@@ -25,12 +25,12 @@ html {
   scroll-behavior: smooth;
   text-align: center;
   scroll-padding: 50px;
-  overflow-x: hidden;
 }
 
 body {
   background: var(--miniProjects);
   color: var(--defaultColor);
+  overflow-x: hidden;
 }
 
 p {
@@ -172,6 +172,37 @@ h2 {
 .profile {
   object-fit: cover;
   position: relative;
+  overflow-x: hidden;
+}
+
+.profile::before {
+  content: "Andre";
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: -10px;
+  left: -50px;
+  font-size: 200px;
+  color: var(--mainProjects);
+  font-family: inherit;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.profile::after {
+  content: "Ferreira";
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  bottom: 10px;
+  left: 20px;
+  font-size: 200px;
+  color: var(--mainProjects);
+  font-family: inherit;
+  font-weight: 500;
+  opacity: .5;
 }
 
 #main-projects-stop {
@@ -182,9 +213,10 @@ h2 {
 .profile-wrapper {
   position: relative;
   margin: auto;
+  z-index: 10;
 }
 
-.background-span {
+/* .background-span {
   color: var(--mainProjects);
   position: absolute;
   font-size: 20rem;
@@ -196,18 +228,18 @@ h2 {
   font-weight: 500;
   text-align: center;
   pointer-events: none;
-}
+} */
 
-.background-span-one {
+/* .background-span-one {
   bottom: 250px;
   left: -60px;
-}
+} */
 
-.background-span-two {
+/* .background-span-two {
   left: 10px;
   bottom: 80px;
   opacity: 0.6;
-}
+} */
 
 .profile-pic-wrapper {
   width: 60%;

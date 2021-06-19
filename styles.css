@@ -24,12 +24,13 @@ html {
   font-family: var(--descText);
   scroll-behavior: smooth;
   text-align: center;
+  scroll-padding: 50px;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--miniProjects);
   color: var(--defaultColor);
-  overflow-x: hidden;
 }
 
 p {

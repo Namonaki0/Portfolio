@@ -187,7 +187,7 @@ h2 {
   color: var(--mainProjects);
   font-family: inherit;
   font-weight: 500;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .profile::after {
@@ -202,7 +202,7 @@ h2 {
   color: var(--mainProjects);
   font-family: inherit;
   font-weight: 500;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #main-projects-stop {
@@ -627,6 +627,10 @@ h1::after {
 
 .project-technologies .fa-sass {
   color: #c76494;
+}
+
+.project-technologies .fa-mailchimp {
+  color: rgba(255, 255, 255, 0.925);
 }
 
 /*? --- MAIN PROJECTS - TABLET --- */

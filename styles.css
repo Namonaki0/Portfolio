@@ -34,7 +34,7 @@ body {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .navbar,
@@ -242,17 +242,27 @@ h2 {
 } */
 
 .profile-pic-wrapper {
-  width: 60%;
-  margin: auto;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  /* background: red; */
+  display: block;
+  /* object-fit: contain;
+  object-position: center; */
+  /* background-size: cover; */
+  /* background: url("projectPictures/profile-picture.jpg"); */
 }
 
 .profile-pic-wrapper img {
   width: 100%;
   display: block;
+  margin-top: 1rem;
 }
 
 .profile-main-details {
   margin: 1rem;
+  display: block;
+  /* background: red; */
 }
 
 .profile-main-details .name {

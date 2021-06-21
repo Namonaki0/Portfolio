@@ -1,5 +1,4 @@
 //? MENU SCROLL EFFECT
-
 const header = document.querySelector("header");
 const logo = document.querySelector("logo");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -16,7 +15,6 @@ window.addEventListener("scroll", () => {
 });
 
 //? MENU LINKS - INTERSECTION OBSERVER
-
 const mainProjectsLink = document.querySelector(".main-projects-cta");
 const miniProjectsLink = document.querySelector(".mini-projects-cta");
 const sections = document.querySelectorAll(".section");
@@ -55,7 +53,6 @@ sections.forEach((section) => {
 });
 
 //? MAIN PROJECTS HOVER EFFECT
-
 const mainImageWrappers = document.querySelectorAll("#main-project-image");
 
 for (let wrapper of mainImageWrappers) {

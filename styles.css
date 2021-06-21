@@ -172,7 +172,8 @@ h2 {
 .profile {
   object-fit: cover;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+
 }
 
 .profile::before {
@@ -181,12 +182,12 @@ h2 {
   position: absolute;
   width: 200px;
   height: auto;
-  top: -10px;
-  left: -50px;
+  top: -5px;
+  left: -10px;
   font-size: 200px;
   color: var(--mainProjects);
-  font-family: inherit;
-  font-weight: 500;
+  /* font-family: var(--descText); */
+  font-weight: 700;
   opacity: 0.5;
 }
 
@@ -196,12 +197,11 @@ h2 {
   position: absolute;
   width: 200px;
   height: auto;
-  bottom: 10px;
-  left: 20px;
+  top: 200px;
+  left: 50px;
   font-size: 200px;
   color: var(--mainProjects);
-  font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   opacity: 0.5;
 }
 
@@ -216,41 +216,11 @@ h2 {
   z-index: 10;
 }
 
-/* .background-span {
-  color: var(--mainProjects);
-  position: absolute;
-  font-size: 20rem;
-  opacity: 0.5;
-  left: -50px;
-  bottom: 100px;
-  width: 5ch;
-  font-family: inherit;
-  font-weight: 500;
-  text-align: center;
-  pointer-events: none;
-} */
-
-/* .background-span-one {
-  bottom: 250px;
-  left: -60px;
-} */
-
-/* .background-span-two {
-  left: 10px;
-  bottom: 80px;
-  opacity: 0.6;
-} */
-
 .profile-pic-wrapper {
   width: 200px;
   height: auto;
   margin: 0 auto;
-  /* background: red; */
   display: block;
-  /* object-fit: contain;
-  object-position: center; */
-  /* background-size: cover; */
-  /* background: url("projectPictures/profile-picture.jpg"); */
 }
 
 .profile-pic-wrapper img {
@@ -262,7 +232,6 @@ h2 {
 .profile-main-details {
   margin: 1rem;
   display: block;
-  /* background: red; */
 }
 
 .profile-main-details .name {
@@ -339,14 +308,16 @@ h2 {
 
 .profile-description {
   font-size: 1.5rem;
-  margin: 2rem 0 3rem;
+  margin: 0 auto 2rem;
+  width: 85%;
 }
 
 .fa-quote-left,
 .fa-quote-right {
-  color: var(--navFooter);
-  font-size: 2rem;
-  padding: 0 0.8rem;
+  /* color: var(--navFooter); */
+  color: rgba(192, 192, 192, 0.205);
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 .fa-quote-right {
@@ -373,11 +344,11 @@ h2 {
   }
 
   .profile-pic-wrapper {
-    width: 50%;
     margin-top: 2rem;
   }
 
   .profile-main-details {
+    flex-basis: 1;
     margin: 1rem;
   }
 
@@ -429,7 +400,7 @@ h2 {
 
   .profile-wrapper {
     display: flex;
-    padding: 5rem;
+    padding: 1rem 5rem;
   }
 
   .profile-pic-wrapper {
@@ -437,11 +408,16 @@ h2 {
     max-width: 300px;
     margin-top: 2rem;
     margin-right: 5rem;
-    box-shadow: 3px 3px var(--miniProjects), 8px 8px var(--highlight);
+  }
+
+  .profile-pic-wrapper img {
+    box-shadow: 5px 5px var(--highlight);
   }
 
   .profile-main-details {
     margin: 1rem;
+    /* background: red; */
+    align-self: center;
   }
 
   .profile-main-details .name {
@@ -453,11 +429,6 @@ h2 {
     font-size: 1.8rem;
   }
 
-  .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   .contact-wrapper .contact {
     font-size: 2rem;
     display: flex;
@@ -467,14 +438,12 @@ h2 {
     margin-right: auto;
   }
 
+  .email-wrapper,
   .phone-wrapper {
     margin-left: 0;
   }
 
-  .social-links {
-    border-left: none;
-    padding-left: 0;
-  }
+
 
   .profile-description {
     width: 100%;
@@ -488,6 +457,16 @@ h2 {
   .profile-wrapper {
     width: 90%;
     margin: auto;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-links {
+    border-left: none;
+    padding-left: 0;
   }
 }
 

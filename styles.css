@@ -631,7 +631,20 @@ h1::after {
 
 .main-project-title {
   font-size: 2.5rem;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
+}
+
+.project-description p {
+  font-size: 1.5rem;
+
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.project-description span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: rgb(201, 201, 201);
 }
 
 .main-project-title::after {
@@ -732,12 +745,11 @@ h1::after {
 
   .main-project-title {
     font-size: 3.5rem;
-    margin: 0 0 1rem;
   }
 
   .project-description p {
     font-size: 1.5rem;
-    margin: 2rem auto 3rem;
+    margin: 1rem auto;
     width: 90%;
   }
 
@@ -773,7 +785,6 @@ h1::after {
     flex-wrap: wrap;
     gap: 3rem;
     justify-content: center;
-    /* width: 700px; */
   }
 
   .main-projects-title {
@@ -782,18 +793,22 @@ h1::after {
   }
 
   .project {
-    min-width: 450px;
+    min-width: 700px;
     max-width: 45%;
   }
 }
 
-@media (max-width: 980px) {
-  .project {
-    min-width: 700px;
-  }
-}
 
 @media (min-width: 1000px) {
+
+  .inner-main-projects {
+    gap: 0 5rem;
+  }
+
+  .project {
+    min-width: 450px;
+  }
+
   .main-project-three {
     min-width: 700px;
   }
@@ -813,7 +828,6 @@ h1::after {
 
 .pd-new-tech-hidden {
   display: none;
-  /* visibility: hidden; */
 }
 
 .personal-development-new-tech {

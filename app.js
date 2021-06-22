@@ -28,14 +28,14 @@ observer = new IntersectionObserver(entries, options);
 
 function entries(sections) {
   sections.forEach((section) => {
-    console.log("DONE");
+    // console.log("DONE");
     if (section.isIntersecting && section.intersectionRatio > 0) {
       if (section.target.classList.contains("main-projects")) {
-        console.log("MAIN INTERSECTING");
+        // console.log("MAIN INTERSECTING");
         mainProjectsLink.classList.add("current");
       } else if (section.target.classList.contains("mini-projects")) {
-        console.log("MINI INTERSECTING");
-        console.log(section);
+        // console.log("MINI INTERSECTING");
+        // console.log(section);
         miniProjectsLink.classList.add("current");
       } else {
         return;

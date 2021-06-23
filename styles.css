@@ -24,7 +24,7 @@ html {
   font-family: var(--descText);
   scroll-behavior: smooth;
   text-align: center;
-  scroll-padding: 50px;
+  scroll-padding: 30px;
 }
 
 body {
@@ -815,6 +815,7 @@ h1::after {
 
 .pd-new-tech-hidden {
   display: none;
+  background: hsla(240, 18%, 30%, 0.226);
 }
 
 .personal-development-new-tech {
@@ -1049,7 +1050,7 @@ fieldset {
 
 @media (min-width: 550px) {
   .mini-projects {
-    padding: 2rem;
+    padding: 5rem 0 4rem;
   }
 
   .mini-project {

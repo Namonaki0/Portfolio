@@ -173,10 +173,7 @@ h2 {
   object-fit: cover;
   position: relative;
   overflow: hidden;
-
 }
-
-
 
 /* .profile::before {
   display: inline-block;
@@ -267,7 +264,7 @@ h2 {
   margin-left: 1.5rem;
   font-size: 3rem;
   padding: 0;
-  opacity: .85;
+  opacity: 0.85;
   transition: all 80ms linear;
 }
 
@@ -436,28 +433,21 @@ h2 {
     margin-left: 0;
   }
 
-
-
   .profile-description {
     width: 100%;
     margin: 1rem auto;
     max-width: 90%;
     display: inline-block;
-
   }
 }
 
 @media (min-width: 800px) {
-
   .profile-description {
     font-size: 2rem;
   }
-
 }
 
-
 @media (min-width: 1000px) {
-
   .profile::before {
     content: "Andre";
     display: block;
@@ -486,7 +476,6 @@ h2 {
     opacity: 0.5;
   }
 
-
   .profile-wrapper {
     width: 90%;
     margin: auto;
@@ -501,7 +490,6 @@ h2 {
     border-left: none;
     padding-left: 0;
   }
-
 
   .font-awesome-icon {
     display: block;
@@ -662,6 +650,7 @@ h1::after {
   align-items: center;
   justify-content: center;
   margin-top: 1.8rem;
+  height: 52.6px;
 }
 
 .project-technologies i {
@@ -798,9 +787,7 @@ h1::after {
   }
 }
 
-
 @media (min-width: 1000px) {
-
   .inner-main-projects {
     gap: 0 5rem;
   }

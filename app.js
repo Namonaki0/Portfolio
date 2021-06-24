@@ -65,3 +65,11 @@ for (let wrapper of mainImageWrappers) {
     wrapperPath.classList.remove("show-text");
   });
 }
+
+//? CONTACT FORM
+const submitHandler = document.querySelector("form");
+
+submitHandler.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("LOGGED");
+});

@@ -1129,7 +1129,6 @@ fieldset {
   text-align: left;
   margin-left: 1rem;
   text-transform: capitalize;
-  /* font-style: italic; */
   font-size: 2rem;
   font-family: var(--descText);
   margin-bottom: 0.5rem;
@@ -1179,6 +1178,20 @@ form input[type="submit"]:hover {
 form textarea {
   margin: 0.8rem 0;
   resize: none;
+}
+
+@media (min-width: 900px) {
+  .communication-wrapper {
+    display: flex;
+  }
+
+  .location-wrapper {
+    flex-grow: 1;
+  }
+
+  .form-wrapper {
+    flex-grow: 2;
+  }
 }
 
 /*? FOOTER */

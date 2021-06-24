@@ -1111,6 +1111,51 @@ fieldset {
   }
 }
 
+/*? LOCATION MAP */
+
+.communication-wrapper {
+  margin: 1.8rem 0;
+}
+
+.location-wrapper {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.form-wrapper::before {
+  content: "get in contact";
+  display: block;
+  color: var(--highlight);
+  text-align: left;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  /* font-style: italic; */
+  font-size: 2rem;
+  font-family: var(--descText);
+  margin-bottom: 0.5rem;
+}
+
+form {
+  padding: 0 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.8rem 0.5rem;
+  display: block;
+  width: 100%;
+  font-family: var(--header-text);
+}
+
+form input {
+  margin-bottom: 0.2rem;
+}
+
+form textarea {
+  margin: 0.8rem 0;
+  resize: none;
+}
+
 /*? FOOTER */
 
 footer {

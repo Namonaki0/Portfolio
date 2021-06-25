@@ -67,9 +67,9 @@ for (let wrapper of mainImageWrappers) {
 }
 
 //? CONTACT FORM
-const submitHandler = document.querySelector("form");
+// const submitHandler = document.querySelector("form");
 
-submitHandler.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("LOGGED");
-});
+// submitHandler.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log("LOGGED");
+// });

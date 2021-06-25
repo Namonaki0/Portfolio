@@ -266,8 +266,13 @@ h2 {
   color: #1a7fb6;
 }
 
-.social-links a {
+.social-links a:first-child {
   margin-left: 1.5rem;
+
+}
+
+.social-links a {
+  margin-left: 1rem;
   font-size: 3rem;
   padding: 0;
   opacity: 0.85;
@@ -1171,7 +1176,7 @@ form textarea {
   transition: all 120ms linear;
   background: #393952;
   border: none;
-  color: silver;
+  color: white;
 }
 
 form input:focus,
@@ -1280,7 +1285,8 @@ footer {
   }
 
   .footer-contact p {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    /* text-transform: uppercase; */
   }
 
   .social-links a {

@@ -50,6 +50,12 @@ p {
   flex-direction: column;
 }
 
+@media (min-width: 700px) {
+  html {
+    scroll-padding: 80px;
+  }
+}
+
 /*? HEADER */
 
 header {
@@ -528,7 +534,8 @@ h2 {
 .profile,
 .main-projects,
 .personal-development,
-.mini-projects {
+.mini-projects
+ {
   padding: 1rem;
 }
 
@@ -1114,12 +1121,27 @@ fieldset {
 /*? LOCATION MAP */
 
 .communication-wrapper {
-  margin: 1.8rem 0;
+  margin: 1.8rem 0 0;
+  background: #2f2f44;
+  padding: .5rem 0 1.5rem;
 }
 
 .location-wrapper {
   margin-bottom: 1.5rem;
   padding: 0.5rem;
+  overflow: hidden;
+  /* width: 500px; */
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+}
+
+.location-wrapper iframe {
+  height: 100%;
+  width: 600px;
+  max-width: 100%;
+  border: 0;
+  margin-left: auto;
 }
 
 .form-wrapper::before {
@@ -1140,13 +1162,16 @@ form {
 
 form input,
 form textarea {
-  padding: 0.8rem 0.5rem;
+  padding: 0.8rem 0.8rem;
   margin: 0.5rem 0;
   display: block;
   width: 100%;
   font-family: var(--header-text);
   outline: none;
   transition: all 120ms linear;
+  background: #393952;
+  border: none;
+  color: silver;
 }
 
 form input:focus,
@@ -1174,10 +1199,17 @@ form button:hover {
   cursor: pointer;
   background: #4c4c72ce;
 }
+form button:focus {
+  border: 1px solid var(--highlight);
+}
 
 form textarea {
   margin: 0.8rem 0;
   resize: none;
+}
+
+::placeholder {
+  color: rgba(214, 214, 214, 0.63);
 }
 
 @media (min-width: 900px) {
@@ -1185,12 +1217,31 @@ form textarea {
     display: flex;
   }
 
+  .form-wrapper::before {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+
+  }
+
   .location-wrapper {
     flex-grow: 1;
+    margin: .5rem 0 0;
+    width: 400px;
+    height: 400px;
   }
 
   .form-wrapper {
     flex-grow: 2;
+    align-self: center;
+  }
+
+  form input {
+   padding: 1.2rem;
+  }
+
+  form textarea {
+    height: 200px;
   }
 }
 

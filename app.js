@@ -17,6 +17,7 @@ window.addEventListener("scroll", () => {
 //? MENU LINKS - INTERSECTION OBSERVER
 const mainProjectsLink = document.querySelector(".main-projects-cta");
 const miniProjectsLink = document.querySelector(".mini-projects-cta");
+const communicationsLink = document.querySelector(".communication-link-cta");
 const sections = document.querySelectorAll(".section");
 
 let options = {
@@ -28,15 +29,13 @@ observer = new IntersectionObserver(entries, options);
 
 function entries(sections) {
   sections.forEach((section) => {
-    // console.log("DONE");
     if (section.isIntersecting && section.intersectionRatio > 0) {
       if (section.target.classList.contains("main-projects")) {
-        // console.log("MAIN INTERSECTING");
         mainProjectsLink.classList.add("current");
       } else if (section.target.classList.contains("mini-projects")) {
-        // console.log("MINI INTERSECTING");
-        // console.log(section);
         miniProjectsLink.classList.add("current");
+      } else if (section.target.classList.contains("communication-wrapper")) {
+        communicationsLink.classList.add("current");
       } else {
         return;
       }
@@ -44,6 +43,7 @@ function entries(sections) {
     if (!section.isIntersecting) {
       mainProjectsLink.classList.remove("current");
       miniProjectsLink.classList.remove("current");
+      communicationsLink.classList.remove("current");
     }
   });
 }
@@ -65,11 +65,3 @@ for (let wrapper of mainImageWrappers) {
     wrapperPath.classList.remove("show-text");
   });
 }
-
-//? CONTACT FORM
-// const submitHandler = document.querySelector("form");
-
-// submitHandler.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   console.log("LOGGED");
-// });

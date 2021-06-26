@@ -268,7 +268,6 @@ h2 {
 
 .social-links a:first-child {
   margin-left: 1.5rem;
-
 }
 
 .social-links a {
@@ -539,8 +538,7 @@ h2 {
 .profile,
 .main-projects,
 .personal-development,
-.mini-projects
- {
+.mini-projects {
   padding: 1rem;
 }
 
@@ -1058,6 +1056,19 @@ fieldset {
   margin-bottom: 0;
 }
 
+/* .mini-project-description-topic p {
+  text-transform: uppercase;
+} */
+
+.mini-project-description-topic span {
+  /* background: red; */
+  color: rgb(206, 206, 206);
+  display: block;
+  text-align: right;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
 /*? --- MINI-PROJECTS - TABLET --- */
 
 @media (min-width: 550px) {
@@ -1128,7 +1139,7 @@ fieldset {
 .communication-wrapper {
   margin: 1.8rem 0 0;
   background: #2f2f44;
-  padding: .5rem 0 1.5rem;
+  padding: 0.5rem 0 1.5rem;
 }
 
 .location-wrapper {
@@ -1226,12 +1237,11 @@ form textarea {
     font-size: 3rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
-
   }
 
   .location-wrapper {
     flex-grow: 1;
-    margin: .5rem 0 0;
+    margin: 0.5rem 0 0;
     width: 400px;
     height: 400px;
   }
@@ -1242,7 +1252,7 @@ form textarea {
   }
 
   form input {
-   padding: 1.2rem;
+    padding: 1.2rem;
   }
 
   form textarea {

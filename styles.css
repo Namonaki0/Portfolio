@@ -1056,9 +1056,13 @@ fieldset {
   margin-bottom: 0;
 }
 
-/* .mini-project-description-topic p {
-  text-transform: uppercase;
-} */
+.mini-project-description-topic {
+  display: block;
+  flex-grow: 1;
+}
+.mini-project-description-topic p {
+  text-align: right;
+}
 
 .mini-project-description-topic span {
   /* background: red; */

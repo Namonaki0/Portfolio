@@ -187,7 +187,7 @@ h2 {
 
 #main-projects-stop {
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
 .profile-wrapper {
@@ -552,6 +552,10 @@ h1::after {
   right: 30px;
 }
 
+.inner-main-projects {
+  position: relative;
+}
+
 .project {
   margin-bottom: 3rem;
 }
@@ -870,6 +874,10 @@ fieldset {
     padding: 0;
     display: flex;
     position: relative;
+  }
+
+  .personal-development-description {
+    text-align: right;
   }
 
   .field-set-wrapper {

@@ -117,7 +117,6 @@ a {
 }
 
 .no-padding {
-  /* padding: 1.5rem 1rem; */
   font-size: 1.05rem;
 }
 
@@ -1070,7 +1069,6 @@ fieldset {
 }
 
 .mini-project-description-topic span {
-  /* background: red; */
   color: rgb(206, 206, 206);
   display: block;
   text-align: right;
@@ -1082,7 +1080,7 @@ fieldset {
 
 @media (min-width: 550px) {
   .mini-projects {
-    padding: 5rem 0 4rem;
+    padding: 5rem 3rem 4rem;
   }
 
   .mini-project {
@@ -1155,7 +1153,6 @@ fieldset {
   margin-bottom: 1.5rem;
   padding: 0.5rem;
   overflow: hidden;
-  /* width: 500px; */
   width: 100%;
   max-width: 100%;
   height: 250px;

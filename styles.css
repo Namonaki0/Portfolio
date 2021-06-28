@@ -246,7 +246,7 @@ h2 {
   border-left: 1px solid white;
   font-size: 2.5rem;
   text-align: left;
-  /* flex-grow: 1; */
+  flex-grow: 1;
   align-items: center;
 }
 
@@ -488,6 +488,10 @@ h2 {
   .social-links {
     border-left: none;
     padding-left: 0;
+  }
+
+  .social-links a:first-child {
+    margin-left: 0;
   }
 
   .font-awesome-icon {
@@ -1273,12 +1277,38 @@ footer {
   color: var(--defaultColor);
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.footer-social-links {
+  display: flex;
+  border-left: 1px solid white;
+}
+
+.footer-social-links a {
+  font-size: 2.5rem;
+  margin: 0 1rem 0 0;
+  padding: 0;
+  opacity: 0.85;
+  transition: all 90ms linear;
+}
+
+.footer-social-links a:first-child {
+  margin-left: 1.2rem;
+}
+
+.footer-social-links a:hover {
+  opacity: 1;
 }
 
 .sub-footer {
   text-align: right;
   margin-right: 1.5rem;
+}
+.sub-footer .rights {
+  color: rgb(194, 194, 194);
+  font-size: 1.3rem;
 }
 
 .footer-contact {
@@ -1306,11 +1336,10 @@ footer {
 
   .footer-contact p {
     font-size: 2rem;
-    /* text-transform: uppercase; */
   }
 
-  .social-links a {
-    font-size: 3.5rem;
+  .footer-social-links a {
+    font-size: 3.2rem;
     margin: 0 0.5rem;
   }
 }

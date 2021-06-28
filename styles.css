@@ -117,7 +117,7 @@ a {
 }
 
 .no-padding {
-  padding: 1.5rem 1rem;
+  /* padding: 1.5rem 1rem; */
   font-size: 1.05rem;
 }
 
@@ -246,7 +246,7 @@ h2 {
   border-left: 1px solid white;
   font-size: 2.5rem;
   text-align: left;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   align-items: center;
 }
 
@@ -1039,6 +1039,7 @@ fieldset {
   border-radius: 0 0 3px 3px;
   z-index: 1;
   border-top: 1px solid #565681;
+  align-items: center;
 }
 
 .mini-project-description h2 {
@@ -1271,16 +1272,21 @@ footer {
   padding: 2rem 0;
   color: var(--defaultColor);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+}
+
+.sub-footer {
+  text-align: right;
+  margin-right: 1.5rem;
 }
 
 .footer-contact {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-end;
   flex-grow: 1;
   text-align: right;
-  margin-right: 1.5rem;
 }
 
 /*? --- FOOTER - TABLET --- */

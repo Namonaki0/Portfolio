@@ -31,13 +31,10 @@ function entries(sections) {
   sections.forEach((section) => {
     if (section.isIntersecting && section.intersectionRatio > 0) {
       if (section.target.classList.contains("main-projects")) {
-        console.log("INTERSECTING");
         mainProjectsLink.classList.add("current");
       } else if (section.target.classList.contains("mini-projects")) {
-        console.log("INTERSECTING");
         miniProjectsLink.classList.add("current");
       } else if (section.target.classList.contains("communication-wrapper")) {
-        console.log("INTERSECTING");
         communicationsLink.classList.add("current");
       } else {
         return;

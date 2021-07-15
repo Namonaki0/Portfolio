@@ -32,6 +32,7 @@ function entries(sections) {
     if (section.isIntersecting && section.intersectionRatio > 0) {
       if (section.target.classList.contains("main-projects")) {
         mainProjectsLink.classList.add("current");
+        console.log("intersecting");
       } else if (section.target.classList.contains("mini-projects")) {
         miniProjectsLink.classList.add("current");
       } else if (section.target.classList.contains("communication-wrapper")) {

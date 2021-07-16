@@ -11,6 +11,10 @@
   --boxShadow: #00000033;
   --headerText: "Montserrat", sans-serif;
   --descText: "Open Sans", sans-serif;
+  --nav: 18px;
+  --mainTitle: 22px;
+  --secondaryTitle: 20px;
+  --text: 16px;
 }
 
 * {
@@ -71,6 +75,8 @@ header {
   text-transform: uppercase;
   background: unset;
   z-index: 1000;
+  font-weight: bold;
+  
 }
 
 .effect {
@@ -105,7 +111,7 @@ a {
 .nav-links {
   list-style: none;
   justify-content: flex-end;
-  font-size: 1.2rem;
+  font-size: 1rem;
   align-items: center;
   flex-grow: 1;
 }
@@ -117,7 +123,7 @@ a {
 }
 
 .no-padding {
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .nav-link-cta:hover {
@@ -130,6 +136,10 @@ a {
 h1,
 h2 {
   font-family: var(--headerText);
+}
+
+h2 {
+  letter-spacing: 1px;
 }
 
 /*? --- HEADER - TABLET ------ */

@@ -4,6 +4,7 @@ const logo = document.querySelector("logo");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
+  // if (window.innerWidth > 375) {
   header.classList.toggle("effect", window.scrollY > 0);
   navLinks.forEach((navLink) => {
     if (window.scrollY > 0) {
@@ -12,6 +13,7 @@ window.addEventListener("scroll", () => {
       navLink.classList.remove("no-padding");
     }
   });
+  // }
 });
 
 //? MENU LINKS - INTERSECTION OBSERVER
@@ -32,7 +34,6 @@ function entries(sections) {
     if (section.isIntersecting && section.intersectionRatio > 0) {
       if (section.target.classList.contains("main-projects")) {
         mainProjectsLink.classList.add("current");
-        console.log("intersecting");
       } else if (section.target.classList.contains("mini-projects")) {
         miniProjectsLink.classList.add("current");
       } else if (section.target.classList.contains("communication-wrapper")) {

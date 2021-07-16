@@ -154,7 +154,7 @@ h2 {
   }
 
   .nav-links {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .nav-link {
@@ -162,7 +162,7 @@ h2 {
   }
 
   .nav-link-cta {
-    padding: 1.8rem 1.2rem;
+    padding: 1.8rem 1.5rem;
   }
 }
 
@@ -180,6 +180,10 @@ h2 {
   .nav-link-cta {
     padding: 2rem 1.6rem;
   }
+
+   .nav-links {
+     font-size: 1.8rem;
+   }
 }
 
 /*? PROFILE */
@@ -640,7 +644,6 @@ h1::after {
 
 .project-description p {
   font-size: 1.5rem;
-
   margin: 1rem auto;
   width: 90%;
 }
@@ -850,6 +853,7 @@ h1::after {
 .personal-development-end-line {
   font-size: 1.5rem;
   margin: 2rem 0 1rem;
+  text-align: center;
 }
 
 legend {
@@ -887,10 +891,6 @@ fieldset {
     padding: 0;
     display: flex;
     position: relative;
-  }
-
-  .personal-development-description {
-    text-align: right;
   }
 
   .field-set-wrapper {
@@ -1177,12 +1177,11 @@ fieldset {
 }
 
 .form-wrapper::before {
-  content: "get in contact";
+  content: "Get in contact";
   display: block;
   color: var(--highlight);
   text-align: left;
   margin-left: 1rem;
-  text-transform: capitalize;
   font-size: 2rem;
   font-family: var(--descText);
   margin-bottom: 0.5rem;

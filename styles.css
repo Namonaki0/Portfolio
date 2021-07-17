@@ -31,6 +31,16 @@ html {
   scroll-padding: 30px;
 }
 
+::-webkit-scrollbar {
+  background: #29293b;
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button {
+  background: #3f3f5c;
+}
+
 body {
   background: var(--miniProjects);
   color: var(--defaultColor);
@@ -76,7 +86,6 @@ header {
   background: unset;
   z-index: 1000;
   font-weight: bold;
-  
 }
 
 .effect {
@@ -181,9 +190,9 @@ h2 {
     padding: 2rem 1.6rem;
   }
 
-   .nav-links {
-     font-size: 1.8rem;
-   }
+  .nav-links {
+    font-size: 1.8rem;
+  }
 }
 
 /*? PROFILE */

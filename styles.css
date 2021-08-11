@@ -801,7 +801,6 @@ h1::after {
   .inner-main-projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
     justify-content: center;
   }
 
@@ -812,17 +811,29 @@ h1::after {
 
   .project {
     min-width: 700px;
-    max-width: 45%;
   }
 }
 
 @media (min-width: 1000px) {
   .inner-main-projects {
-    gap: 0 5rem;
+    gap: 0 2rem;
   }
 
   .project {
     min-width: 450px;
+    width: 450px;
+  }
+  .main-project-three {
+    min-width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .inner-main-projects {
+    gap: 0 4rem;
+  }
+  .project {
+    min-width: 550px;
   }
 
   .main-project-three {

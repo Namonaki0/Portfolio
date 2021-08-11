@@ -588,10 +588,10 @@ h1::after {
 
 #main-project-image img {
   width: 100%;
-  opacity: 1;
+  /* opacity: 1;
   height: 200px;
   object-fit: cover;
-  object-position: center;
+  object-position: center; */
   border-radius: unset;
   transition: all 150ms ease-in-out;
 }
@@ -649,6 +649,7 @@ h1::after {
 .main-project-title {
   font-size: 2.5rem;
   margin: 0 0 2rem;
+  text-transform: uppercase;
 }
 
 .project-description p {
@@ -761,7 +762,7 @@ h1::after {
   }
 
   .main-project-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .project-description p {

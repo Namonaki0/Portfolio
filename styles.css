@@ -588,10 +588,6 @@ h1::after {
 
 #main-project-image img {
   width: 100%;
-  /* opacity: 1;
-  height: 200px;
-  object-fit: cover;
-  object-position: center; */
   border-radius: unset;
   transition: all 150ms ease-in-out;
 }
@@ -1020,6 +1016,7 @@ fieldset {
   box-shadow: 0 1px 1px var(--boxShadow);
   margin-bottom: 2rem;
   border-radius: 3px;
+  overflow: hidden;
 }
 
 .mini-image-wrapper {
@@ -1087,8 +1084,8 @@ fieldset {
   color: var(--highlight);
 }
 
-.mini-project:last-child {
-  margin-bottom: 0;
+.mini-project:first-child {
+  margin-top: 2rem;
 }
 
 .mini-project-description-topic {
@@ -1140,7 +1137,7 @@ fieldset {
   }
 }
 
-/*? --- PERSONAL DEVELOPMENT - DESKTOP --- */
+/*? --- MINI-PROJECTS - DESKTOP --- */
 
 @media (min-width: 900px) {
   .mini-projects {
@@ -1156,7 +1153,7 @@ fieldset {
   }
 }
 
-/*? --- PERSONAL DEVELOPMENT - LARGE SCALE --- */
+/*? --- MINI-PROJECTS - LARGE SCALE --- */
 
 @media (min-width: 1100px) {
   .mini-projects {
@@ -1164,18 +1161,22 @@ fieldset {
   }
 
   .mini-project {
-    width: 500px;
+    width: 480px;
   }
 
-  .mini-project-three {
-    width: 700px;
+}
+
+@media (min-width: 1250px) {
+
+  .mini-project {
+    width: 550px;
   }
+
 }
 
 /*? LOCATION MAP */
 
 .communication-wrapper {
-  margin: 1.8rem 0 0;
   background: #2f2f44;
   padding: 0.5rem 0 1.5rem;
 }

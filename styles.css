@@ -110,6 +110,7 @@ a {
 .logo {
   font-size: 3.5rem;
   align-self: center;
+  text-align: left;
   margin-left: 1.2rem;
   -webkit-text-fill-color: var(--miniProjects);
   -webkit-text-stroke: 1px white;
@@ -164,6 +165,7 @@ h2 {
 
   .nav-links {
     font-size: 1.5rem;
+    justify-content: flex-end;
   }
 
   .nav-link {
@@ -1106,10 +1108,6 @@ fieldset {
     padding: 5rem 3rem 2rem;
   }
 
-  /* .mini-project {
-    margin-bottom: 2.5rem;
-  } */
-
   .mini-image-wrapper {
     height: 200px;
   }
@@ -1138,7 +1136,6 @@ fieldset {
   .mini-projects {
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: 2rem; */
     gap: 0 3rem;
     justify-content: center;
   }
@@ -1161,8 +1158,7 @@ fieldset {
    .mini-project:nth-child(2) {
     gap: 0 3rem;
    }
-
-
+   
 }
 
 /*? LOCATION MAP */

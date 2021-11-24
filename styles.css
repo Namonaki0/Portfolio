@@ -705,6 +705,10 @@ h1::after {
   color: rgba(255, 255, 255, 0.925);
 }
 
+.project-technologies .fa-react {
+  color: #5ed3f3;
+}
+
 .firebase-wrapper {
   display: inline-block;
   margin: 0;
@@ -821,7 +825,9 @@ h1::after {
     min-width: 450px;
     width: 450px;
   }
-  .main-project-three {
+
+  .main-project-three,
+  .main-project-react {
     min-width: 700px;
   }
 }
@@ -834,7 +840,8 @@ h1::after {
     min-width: 550px;
   }
 
-  .main-project-three {
+  .main-project-three,
+  .main-project-react {
     min-width: 700px;
   }
 }
@@ -1148,17 +1155,15 @@ fieldset {
 /*? --- MINI-PROJECTS - LARGE SCALE --- */
 
 @media (min-width: 1250px) {
-
   .mini-project {
     width: 550px;
     height: 305px;
     padding-bottom: 0;
   }
 
-   .mini-project:nth-child(2) {
+  .mini-project:nth-child(2) {
     gap: 0 3rem;
-   }
-   
+  }
 }
 
 /*? LOCATION MAP */

@@ -257,6 +257,7 @@ h2 {
 
 .job-title {
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 .contact-wrapper {

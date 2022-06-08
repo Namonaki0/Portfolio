@@ -508,6 +508,14 @@ h2 {
 
   .profile-pic-wrapper {
     margin-right: 80px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .profile-pic-wrapper img {
+    width: 250px;
+    height: 250px;
+    object-position: center;
   }
 
   .contact-wrapper {
@@ -556,6 +564,7 @@ h2 {
 
 .mini-projects {
   background: var(--miniProjects);
+  padding-top: 20px;
 }
 
 .profile,
@@ -649,6 +658,7 @@ h1::after {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   border-top: 1px solid #6a6a96;
   border-bottom: 5px solid var(--highlight);
+  border-radius: 0 0 3px 3px;
 }
 
 .main-project-title {
@@ -688,8 +698,12 @@ h1::after {
 }
 
 .project-technologies i {
-  margin-left: 0.5rem;
-  font-size: 2.5rem;
+  margin-left: 1rem;
+  font-size: 3rem;
+}
+
+.project-technologies i:first-child {
+  margin-left: 0;
 }
 
 .project-technologies .fa-html5 {
@@ -717,14 +731,17 @@ h1::after {
 }
 
 .firebase-wrapper {
-  display: inline-block;
   margin: 0;
   padding: 0;
-  width: 3rem;
+  height: 30px;
+  width: 37.5px;
+  display: grid;
+  place-content: center;
 }
 
 .firebase-wrapper img {
   width: 100%;
+  vertical-align: top;
 }
 
 .code-link {
@@ -906,6 +923,13 @@ h1::after {
   font-size: 1.5rem;
   margin: 2rem 0 1rem;
   text-align: center;
+}
+
+.personal-development-end-line .get-in-contact-cta{
+  margin-left: 0;
+  padding-left: 0;
+  color: inherit;
+  text-decoration: underline;
 }
 
 legend {
@@ -1121,9 +1145,19 @@ fieldset {
 .mini-project-description-topic {
   display: block;
   flex-grow: 1;
+  position: relative;
 }
+
+.mini-project-code-link {
+  display: block;
+  text-align: right;
+  padding: 0 1.5rem;
+  margin: 10px;
+}
+
 .mini-project-description-topic p {
   text-align: right;
+  margin-top: 10px;
 }
 
 .mini-project-description-topic span {
@@ -1131,7 +1165,8 @@ fieldset {
   display: block;
   text-align: right;
   font-size: 1.3rem;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 10px;
 }
 
 /*? --- MINI-PROJECTS - TABLET --- */

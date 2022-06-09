@@ -14,6 +14,10 @@
   --mainTitle: 22px;
   --secondaryTitle: 20px;
   --text: 16px;
+  --opacity: 0.1;
+  --transform: translateX(-10px);
+  --duration: 400ms;
+  --delay: 150ms;
 }
 
 * {
@@ -218,6 +222,8 @@ h2 {
   height: auto;
   margin: 0 auto;
   display: block;
+    --transform: translateY(-10px);
+  animation: loadingProfile var(--duration) linear;
 }
 
 .profile-pic-wrapper img {
@@ -240,6 +246,7 @@ h2 {
   z-index: 100;
   position: relative;
   display: inline-block;
+  animation: loadingProfile calc(var(--duration) + 50ms) linear var(--delay);
 }
 
 .profile-main-details .name::after {
@@ -249,17 +256,22 @@ h2 {
   display: block;
   background: var(--highlight);
   position: absolute;
+  --transform: translateX(-15px);
+  animation: loadingProfile calc(var(--duration) + 100ms) linear var(--delay);
 }
 
 .job-title {
   margin-top: 0;
   text-transform: uppercase;
+  --opacity: 0;
+  animation: loadingProfile calc(var(--duration) + 150ms) linear var(--delay);
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: space-around;
   margin: 2rem 0;
+  animation: loadingProfile calc(var(--duration) + 180ms) linear var(--delay);
 }
 
 .social-links {
@@ -320,6 +332,8 @@ h2 {
   font-size: 1.5rem;
   margin: 0 auto 2rem;
   width: 85%;
+  --delay: 200ms;
+      animation: loadingProfile calc(var(--duration) + 200ms) linear var(--delay);
 }
 
 .fa-quote-left,
@@ -333,6 +347,18 @@ h2 {
   display: flex;
   justify-self: baseline;
   align-self: flex-start;
+}
+
+@keyframes loadingProfile {
+  0% {
+    opacity: var(--opacity);
+    transform: var(--transform);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /*? --- PROFILE - TABLET --- */
@@ -510,6 +536,7 @@ h2 {
     margin-right: 80px;
     width: 350px;
     height: 350px;
+    --transform: translateX(-10px);
   }
 
   .profile-pic-wrapper img {
@@ -751,6 +778,22 @@ h1::after {
   font-size: 2rem;
 }
 
+.code-link i:hover {
+  animation: hoverEffect 500ms linear;
+}
+
+@keyframes hoverEffect {
+  0% {
+    color: var(--highlight);
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: var(--highlight);
+  }
+}
+
 .mini-project-code-link {
   min-width: 100%;
   text-align: right;
@@ -925,7 +968,7 @@ h1::after {
   text-align: center;
 }
 
-.personal-development-end-line .get-in-contact-cta{
+.personal-development-end-line .get-in-contact-cta {
   margin-left: 0;
   padding-left: 0;
   color: inherit;

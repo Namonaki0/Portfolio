@@ -13,6 +13,9 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+//? MENU SCROLL EFFECT - END
+
+//? -----------------------------
 
 //? MENU LINKS - INTERSECTION OBSERVER
 const mainProjectsLink = document.querySelector(".main-projects-cta");
@@ -20,6 +23,7 @@ const miniProjectsLink = document.querySelector(".mini-projects-cta");
 const communicationsLink = document.querySelector(".communication-link-cta");
 const sections = document.querySelectorAll(".section");
 
+//? PARAMS
 let options = {
   threshold: 0.5,
   rootMargin: "0px",
@@ -51,6 +55,9 @@ function entries(sections) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+//? INTERSECTION OBSERVER - END
+
+//? -----------------------------
 
 //? MAIN PROJECTS HOVER EFFECT
 const mainImageWrappers = document.querySelectorAll("#main-project-image");
@@ -65,3 +72,26 @@ for (let wrapper of mainImageWrappers) {
     wrapperPath.classList.remove("show-text");
   });
 }
+//? MAIN PROJECTS HOVER EFFECT - END
+
+//? -----------------------------
+
+//? PROJECT CODE LINK HOVER EFFECT - GITHUB
+const projectDescription = document.querySelector(".project-description");
+
+window.addEventListener("mouseover", (e) => {
+  const closest = e.target.closest(".fa-code");
+  if (closest) {
+    e.target.offsetParent.parentNode.style.borderBottom = "5px solid white";
+    e.target.offsetParent.parentNode.style.transition = "all 200ms linear";
+  }
+
+  setTimeout(() => {
+    e.target.offsetParent.parentNode.style.borderBottom = "";
+  }, 500);
+
+  return;
+});
+//? PROJECT CODE LINK HOVER EFFECT - END
+
+//? -----------------------------

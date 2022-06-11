@@ -757,7 +757,18 @@ h1::after {
   color: #5ed3f3;
 }
 
-.firebase-wrapper {
+.project-technologies .fa-youtube{
+  color: #cf2929;
+  background-color: white;
+}
+.project-technologies .fa-twitter{
+  color: #1D9BF0;
+}
+
+.firebase-wrapper,
+.framer-motion-wrapper,
+.gatsby-wrapper,
+.youtube-wrapper {
   margin: 0;
   padding: 0;
   height: 30px;
@@ -766,9 +777,27 @@ h1::after {
   place-content: center;
 }
 
-.firebase-wrapper img {
+.gatsby-wrapper {
+  margin-right: 6px;
+  width: 40px;
+  height: 40px;
+}
+
+.framer-motion-wrapper{
+    margin-right: 10px;
+}
+
+.firebase-wrapper img,
+.framer-motion-wrapper img,
+.gatsby-wrapper img,
+.youtube-wrapper img {
   width: 100%;
   vertical-align: top;
+}
+
+.framer-motion-wrapper img {
+  width: 35px;
+  height: 35px;
 }
 
 .code-link {

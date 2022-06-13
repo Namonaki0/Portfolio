@@ -756,16 +756,12 @@ h1::after {
 .project-technologies .fa-react {
   color: #5ed3f3;
 }
-
-.project-technologies .fa-youtube{
-  color: #cf2929;
-  background-color: white;
-}
 .project-technologies .fa-twitter{
   color: #4a94e3;
 }
 
 .firebase-wrapper,
+.graphql-wrapper,
 .framer-motion-wrapper,
 .gatsby-wrapper,
 .youtube-wrapper {
@@ -778,7 +774,7 @@ h1::after {
 }
 
 .gatsby-wrapper {
-  margin-right: 6px;
+  /* margin-right: 6px; */
   width: 40px;
   height: 40px;
 }
@@ -787,7 +783,12 @@ h1::after {
     margin-right: 5px;
 }
 
+.graphql-wrapper{
+    margin: 0 5px;
+}
+
 .firebase-wrapper img,
+.graphql-wrapper svg,
 .framer-motion-wrapper img,
 .gatsby-wrapper img,
 .youtube-wrapper img {

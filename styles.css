@@ -222,7 +222,7 @@ h2 {
   height: auto;
   margin: 0 auto;
   display: block;
-    --transform: translateY(-10px);
+  --transform: translateY(-10px);
   animation: loadingProfile var(--duration) linear;
 }
 
@@ -333,7 +333,7 @@ h2 {
   margin: 0 auto 2rem;
   width: 85%;
   --delay: 200ms;
-      animation: loadingProfile calc(var(--duration) + 200ms) linear var(--delay);
+  animation: loadingProfile calc(var(--duration) + 200ms) linear var(--delay);
 }
 
 .fa-quote-left,
@@ -756,7 +756,7 @@ h1::after {
 .project-technologies .fa-react {
   color: #5ed3f3;
 }
-.project-technologies .fa-twitter{
+.project-technologies .fa-twitter {
   color: #4a94e3;
 }
 
@@ -773,18 +773,23 @@ h1::after {
   place-content: center;
 }
 
+.framer-motion-wrapper {
+  margin-left: 10px;
+}
+
 .gatsby-wrapper {
   /* margin-right: 6px; */
   width: 40px;
   height: 40px;
 }
 
-.fa-twitter{
-    margin-right: 5px;
+.fa-twitter {
+  margin-right: 8px;
 }
 
-.graphql-wrapper{
-    margin: 0 5px;
+.graphql-wrapper {
+  margin: 0 5px;
+  margin-right: 0;
 }
 
 .firebase-wrapper img,

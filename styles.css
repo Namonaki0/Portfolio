@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap");
 
 :root {
   --profile: #393952;
@@ -9,7 +10,7 @@
   --highlight: #ffa500;
   --defaultColor: #ffffff;
   --boxShadow: #00000033;
-  --defaultText: "Montserrat", sans-serif;
+  --defaultText: "Roboto Mono", sans-serif;
   --nav: 18px;
   --mainTitle: 22px;
   --secondaryTitle: 20px;
@@ -61,6 +62,10 @@ p {
   display: flex;
 }
 
+.navbar {
+  flex-direction: column;
+}
+
 .contact,
 .footer-contact {
   justify-content: center;
@@ -70,6 +75,12 @@ p {
 @media (min-width: 700px) {
   html {
     scroll-padding: 80px;
+  }
+}
+
+@media (min-width: 800px) {
+  .navbar {
+    flex-direction: row;
   }
 }
 
@@ -111,32 +122,41 @@ a {
 }
 
 .logo {
-  font-size: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
   align-self: center;
   text-align: left;
   margin-left: 1.2rem;
-  -webkit-text-fill-color: var(--miniProjects);
-  -webkit-text-stroke: 1px white;
-  font-weight: 700;
-  padding: 0;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  padding: 0.5rem 0;
+}
+
+.navbar-job-title {
+  font-size: 1.5rem;
 }
 
 .nav-links {
   list-style: none;
-  justify-content: flex-end;
   font-size: 1rem;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
+  margin-top: 1.2rem;
+  background: #5b5b7c;
+  overflow: hidden;
 }
 
 .nav-link {
   cursor: pointer;
-  margin: 0;
   padding: 0;
+  margin: 1.5rem 0.5rem;
+  font-size: 1.5rem;
 }
 
 .no-padding {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .nav-link-cta:hover {
@@ -152,17 +172,12 @@ h2 {
 /*? --- HEADER - TABLET ------ */
 
 @media (min-width: 550px) {
-  .logo {
-    font-size: 4.5rem;
-  }
-
   .no-padding {
     font-size: 1.5rem;
   }
 
   .nav-links {
     font-size: 1.5rem;
-    justify-content: flex-end;
   }
 
   .nav-link {
@@ -182,7 +197,7 @@ h2 {
   }
 
   .logo {
-    font-size: 5rem;
+    /* font-size: 5rem; */
   }
 
   .nav-link-cta {
@@ -191,6 +206,14 @@ h2 {
 
   .nav-links {
     font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .nav-links {
+    justify-content: flex-end;
+    background: unset;
+    margin-top: 0;
   }
 }
 
@@ -235,42 +258,21 @@ h2 {
   object-position: center;
 }
 
-.profile-main-details {
+.profile-details {
   margin: 1rem;
   display: block;
 }
 
-.profile-main-details .name {
-  font-size: 2.5rem;
-  margin-bottom: 0.8rem;
-  z-index: 100;
-  position: relative;
-  display: inline-block;
-  animation: loadingProfile calc(var(--duration) + 50ms) linear var(--delay);
-}
-
-.profile-main-details .name::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  display: block;
-  background: var(--highlight);
-  position: absolute;
-  --transform: translateX(-15px);
-  animation: loadingProfile calc(var(--duration) + 100ms) linear var(--delay);
-}
-
-.job-title {
-  margin-top: 0;
-  text-transform: uppercase;
-  --opacity: 0;
-  animation: loadingProfile calc(var(--duration) + 150ms) linear var(--delay);
+.profile-welcome {
+  font-size: 2.8rem;
+  display: contents;
 }
 
 .contact-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: 2rem 0;
+  padding: 2rem 0;
   animation: loadingProfile calc(var(--duration) + 180ms) linear var(--delay);
 }
 
@@ -279,16 +281,14 @@ h2 {
   border-left: 1px solid white;
   font-size: 2.5rem;
   text-align: left;
-  flex-grow: 1;
+  flex-grow: 6;
   align-items: center;
 }
 
 .fa-envelope,
 .fa-mobile-alt {
-  /* color: #ffa60098; */
   opacity: 0.5;
   font-size: 2.8rem;
-  /* transform: rotate(-25deg); */
 }
 
 .social-links a:first-child {
@@ -296,7 +296,6 @@ h2 {
 }
 
 .social-links a {
-  /* margin-bottom: 50px; */
   margin-right: 10px;
   font-size: 3rem;
   padding: 0;
@@ -329,24 +328,28 @@ h2 {
 }
 
 .profile-description {
+  position: relative;
   font-size: 1.5rem;
   margin: 0 auto 2rem;
-  width: 85%;
+  padding: 4rem 0 2rem;
+  text-wrap: balance;
+  line-height: 2.5rem;
   --delay: 200ms;
+  border-bottom: 3px solid var(--highlight);
   animation: loadingProfile calc(var(--duration) + 200ms) linear var(--delay);
 }
 
-.fa-quote-left,
-.fa-quote-right {
-  color: rgba(192, 192, 192, 0.205);
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
+iconify-icon.speech-mark-left {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  z-index: -10;
 }
-
-.fa-quote-right {
-  display: flex;
-  justify-self: baseline;
-  align-self: flex-start;
+iconify-icon.speech-mark-right {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  z-index: -10;
 }
 
 @keyframes loadingProfile {
@@ -383,26 +386,26 @@ h2 {
     margin-bottom: 2rem;
   }
 
-  .profile-main-details {
+  .profile-details {
     flex-basis: 1;
     margin: 1rem;
   }
 
-  .profile-main-details .name {
+  /* .profile-details .name {
     font-size: 3.5rem;
   }
 
   .job-title {
     margin-top: 0;
     font-size: 1.8rem;
-  }
+  } */
 
   .contact-wrapper .contact {
     font-size: 2rem;
   }
 
   .contact :is(.email, .phone-number) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .social-links {
@@ -456,19 +459,19 @@ h2 {
     /* object-position: top; */
   }
 
-  .profile-main-details {
+  .profile-details {
     margin: 1rem;
     align-self: center;
   }
 
-  .profile-main-details .name {
+  /* .profile-details .name {
     font-size: 3.5rem;
   }
 
   .job-title {
     margin-top: 0;
     font-size: 1.8rem;
-  }
+  } */
 
   .contact-wrapper .contact {
     font-size: 2rem;
@@ -495,6 +498,7 @@ h2 {
 @media (min-width: 800px) {
   .profile-description {
     font-size: 2rem;
+    width: 70%;
   }
 }
 
@@ -534,29 +538,17 @@ h2 {
 
   .profile-pic-wrapper {
     margin-right: 80px;
-    width: 350px;
-    height: 350px;
     --transform: translateX(-10px);
   }
 
   .profile-pic-wrapper img {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     object-position: center;
   }
 
   .contact-wrapper {
     display: flex;
-    flex-direction: column;
-  }
-
-  .social-links {
-    border-left: none;
-    padding-left: 0;
-  }
-
-  .social-links a:first-child {
-    margin-left: 0;
   }
 
   .font-awesome-icon {
@@ -653,7 +645,7 @@ h1::after {
   top: 40%;
   opacity: 0;
   font-size: 3rem;
-  transform: translate(-50% -50%);
+  translate: 0% -50%;
   text-align: center;
   width: 100%;
   color: white;
@@ -671,7 +663,7 @@ h1::after {
 
 .show-text {
   opacity: 1;
-  z-index: 10;
+  z-index: 100;
 }
 
 .project-description {
@@ -940,11 +932,13 @@ h1::after {
 @media (min-width: 1000px) {
   .inner-main-projects {
     gap: 0 2rem;
+    padding: 0 6rem;
   }
 
   .project {
     min-width: 450px;
     width: 450px;
+    flex: 1;
   }
 
   .main-project-three,
@@ -1400,6 +1394,7 @@ form textarea {
 @media (min-width: 900px) {
   .communication-wrapper {
     display: flex;
+    padding: 4rem 6rem;
   }
 
   .form-wrapper::before {

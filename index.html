@@ -36,7 +36,10 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="#profile" class="logo">AF.</a>
+        <a href="#profile" class="logo">
+          <span class="navbar-name">ANDRE FERREIRA</span>
+          <span class="navbar-job-title">FRONTEND WEB DEVELOPER</span>
+        </a>
 
         <ul class="nav-links">
           <li class="nav-link main-projects-link">
@@ -70,9 +73,30 @@
             alt="profile picture"
           />
         </div>
-        <div class="profile-main-details">
-          <p class="name">Andre Ferreira</p>
-          <p class="job-title">Front-End Developer</p>
+        <div class="profile-details">
+          <!-- <p class="name">Andre Ferreira</p>
+          <p class="job-title">Frontend Web Developer</p> -->
+          <p class="profile-welcome">Hi, welcome to my portfolio</p>
+          <blockquote class="profile-description">
+            <iconify-icon
+              icon="ic:twotone-format-quote"
+              class="speech-mark-left"
+              style="color: #545468"
+              width="60"
+              height="60"
+            ></iconify-icon
+            >I am a self-taught Web Developer and love learning about the latest
+            and most important tools in Web Development. I am an excellent team
+            player, always committed to my role and a very reliable person. I am
+            always looking to improve my problem-solving skills and
+            creativity.<iconify-icon
+              icon="ic:twotone-format-quote"
+              class="speech-mark-right"
+              style="color: #545468"
+              width="60"
+              height="60"
+            ></iconify-icon>
+          </blockquote>
           <div class="contact-wrapper">
             <div class="contact">
               <div class="email-wrapper">
@@ -99,13 +123,6 @@
               ></a>
             </div>
           </div>
-          <blockquote class="profile-description">
-            <i class="fas fa-quote-left"></i>Learning Web Development every day,
-            always eager to learn new tech and constantly working hard.
-            Creativity and problem-solving skills are paramount.<i
-              class="fas fa-quote-right"
-            ></i>
-          </blockquote>
         </div>
       </div>
     </section>
@@ -224,7 +241,7 @@
           <div class="project-description">
             <h2 class="main-project-title">M.R. GATSBY PROJECT</h2>
             <p>Marc Rizzo's concept website</p>
-            -->
+
             <span>real time tweets, youtube feed and touring schedule</span>
             <div class="project-technologies">
               <div class="gatsby-wrapper" title="Gatsby">
@@ -325,10 +342,35 @@
     <section class="personal-development">
       <div class="pd-new-tech-hidden">
         <h3 class="pd-new-tech-hidden-title">currently learning</h3>
-        <i class="fab fa-react"></i>
+        <!-- <i class="fab fa-react"></i>
         <i class="fab fa-node-js"></i>
         <i class="fab fa-python"></i>
-        <i class="fas fa-database"></i>
+        <i class="fas fa-database"></i> -->
+
+        <iconify-icon
+          icon="teenyicons:nuxtjs-outline"
+          width="70"
+          height="70"
+          title="Nuxt.js"
+        ></iconify-icon>
+        <iconify-icon
+          icon="teenyicons:graphql-outline"
+          width="70"
+          height="70"
+          title="GraphQL"
+        ></iconify-icon>
+        <iconify-icon
+          icon="teenyicons:mongodb-outline"
+          width="70"
+          height="70"
+          title="MongoDB"
+        ></iconify-icon>
+        <iconify-icon
+          icon="teenyicons:typescript-outline"
+          width="70"
+          height="70"
+          title="TypeScript"
+        ></iconify-icon>
       </div>
       <div class="field-set-wrapper">
         <fieldset>
@@ -339,10 +381,15 @@
             acquired knowledge to future projects.
           </p>
           <div class="personal-development-new-tech">
-            <span><i class="fab fa-react"></i></span>
+            <!-- <span><i class="fab fa-react"></i></span>
             <span><i class="fab fa-node-js"></i></span>
             <span><i class="fab fa-python"></i></span>
-            <span><i class="fas fa-database"></i></span>
+            <span><i class="fas fa-database"></i></span> -->
+            <iconify-icon
+              icon="teenyicons:typescript-outline"
+              width="60"
+              height="60"
+            ></iconify-icon>
           </div>
           <p class="personal-development-end-line">
             If you like what you see here,
@@ -452,6 +499,52 @@
           </div>
         </div>
       </div>
+      <!--? MINI PROJECT FIVE -->
+      <div class="mini-project mini-project-five">
+        <div class="mini-image-wrapper" id="mini-project-image">
+          <a
+            href="https://www.skyenviroproject.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="./projectPictures/skyenviro.PNG"
+              alt="skyenviro weather app picture"
+            />
+            <span class="knockout-text">skyenviro</span>
+          </a>
+        </div>
+        <div class="mini-project-description">
+          <h2>#5</h2>
+          <div class="mini-project-description-topic">
+            <p>Get the weather for any city.</p>
+            <span>PWA | search input | search history</span>
+          </div>
+        </div>
+      </div>
+      <!--? MINI PROJECT SIX -->
+      <div class="mini-project mini-project-six">
+        <div class="mini-image-wrapper" id="mini-project-image">
+          <a
+            href="https://www.skyenviroproject.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="./projectPictures/skyenviro.PNG"
+              alt="skyenviro weather app picture"
+            />
+            <span class="knockout-text">skyenviro</span>
+          </a>
+        </div>
+        <div class="mini-project-description">
+          <h2>#6</h2>
+          <div class="mini-project-description-topic">
+            <p>Get the weather for any city.</p>
+            <span>PWA | search input | search history</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section communication-wrapper" id="communication-wrapper">
@@ -485,7 +578,7 @@
     <footer>
       <div class="sub-footer">
         <p class="domain">andreferreiradev.com</p>
-        <p class="rights">all rights reserved 2022</p>
+        <p class="rights">all rights reserved 2023</p>
       </div>
 
       <div class="footer-social-links">
@@ -514,6 +607,7 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </body>
 </html>
 

@@ -276,6 +276,20 @@ h2 {
   animation: loadingProfile calc(var(--duration) + 180ms) linear var(--delay);
 }
 
+.tools-wrapper {
+  margin-top: 1rem;
+}
+
+.tools-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none
+}
+
+.tools-list .tool {
+
+}
+
 .social-links {
   display: flex;
   border-left: 1px solid white;
@@ -391,21 +405,20 @@ iconify-icon.speech-mark-right {
     margin: 1rem;
   }
 
-  /* .profile-details .name {
-    font-size: 3.5rem;
-  }
-
-  .job-title {
-    margin-top: 0;
-    font-size: 1.8rem;
-  } */
-
   .contact-wrapper .contact {
     font-size: 2rem;
   }
 
   .contact :is(.email, .phone-number) {
     font-size: 1.8rem;
+  }
+
+  .email {
+    padding: 0;
+  }
+
+  .phone-number {
+    color: rgb(194, 194, 194);
   }
 
   .social-links {
@@ -456,22 +469,17 @@ iconify-icon.speech-mark-right {
   .profile-pic-wrapper img {
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8);
     min-width: 100%;
-    /* object-position: top; */
   }
+
+  .tools-list {
+  justify-content: flex-start;
+  gap: 2rem;
+}
 
   .profile-details {
     margin: 1rem;
     align-self: center;
   }
-
-  /* .profile-details .name {
-    font-size: 3.5rem;
-  }
-
-  .job-title {
-    margin-top: 0;
-    font-size: 1.8rem;
-  } */
 
   .contact-wrapper .contact {
     font-size: 2rem;
@@ -498,7 +506,7 @@ iconify-icon.speech-mark-right {
 @media (min-width: 800px) {
   .profile-description {
     font-size: 2rem;
-    width: 70%;
+    /* width: 70%; */
   }
 }
 
@@ -575,6 +583,12 @@ iconify-icon.speech-mark-right {
   }
 }
 
+@media (min-width: 1600px) {
+  .profile-description {
+    width: 70%;
+  }
+}
+
 /*? MAIN PROJECTS */
 
 .main-projects {
@@ -643,16 +657,17 @@ h1::after {
 .main-project-span {
   position: absolute;
   top: 40%;
+  left: 2%;
   opacity: 0;
   font-size: 3rem;
-  translate: 0% -50%;
+  /* translate: 0% -%; */
   text-align: center;
   width: 100%;
   color: white;
   pointer-events: none;
-  font-weight: 100;
-  letter-spacing: 0.8rem;
-  transition: opacity 350ms ease-in;
+  /* font-weight: 100; */
+  letter-spacing: 15px;
+  transition: all 250ms ease-in;
   margin: auto;
 }
 
@@ -664,6 +679,8 @@ h1::after {
 .show-text {
   opacity: 1;
   z-index: 100;
+  font-weight: 500;
+  letter-spacing: 20px;
 }
 
 .project-description {
@@ -969,6 +986,24 @@ h1::after {
   display: flex;
 }
 
+.nuxt-icon,
+.graphql-icon,
+.mongo-db {
+  transition: all 100ms linear;
+}
+
+.graphql-icon:hover {
+  color: #D932A2;
+}
+
+.nuxt-icon:hover {
+    color: #00BB87
+}
+
+.mongo-db:hover {
+    color: #3F8E41;
+}
+
 .field-set-wrapper {
   background-color: white;
 }
@@ -979,7 +1014,7 @@ h1::after {
 }
 
 .personal-development-new-tech {
-  margin: 1.5rem;
+  margin: 3rem 1.5rem 1.5rem;
   font-size: 5rem;
 }
 
@@ -1424,11 +1459,41 @@ form textarea {
   }
 }
 
+
+/*? PRE-FOOTER */
+/* 
+.pre-footer {
+  height: 250px;
+  text-align: left;
+}
+
+.pre-footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.external-links {
+  flex: 1;
+}
+
+.built-on {
+  width: max-content;
+  list-style: none;
+  flex: 1;
+}
+
+.built-on-tool {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+} */
+
 /*? FOOTER */
 
 footer {
   background: var(--miniProjectsDesc);
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   color: var(--defaultColor);
   display: flex;
   justify-content: center;

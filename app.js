@@ -62,8 +62,6 @@ sections.forEach((section) => {
 //? MAIN PROJECTS HOVER EFFECT
 const mainImageWrappers = document.querySelectorAll("#main-project-image");
 
-console.log(mainImageWrappers);
-
 mainImageWrappers.forEach((wrapper) => {
   wrapper.addEventListener("mouseover", (e) => {
     e.target.previousElementSibling.classList.add("show-text");
@@ -72,37 +70,26 @@ mainImageWrappers.forEach((wrapper) => {
     e.target.previousElementSibling.classList.remove("show-text");
   });
 });
-
-// for (let wrapper of mainImageWrappers) {
-//   wrapper.addEventListener("mouseover", (e) => {
-//     const wrapperPath = e.path[1].childNodes[1];
-//     wrapperPath.classList.add("show-text");
-//   });
-//   wrapper.addEventListener("mouseout", (e) => {
-//     const wrapperPath = e.path[1].childNodes[1];
-//     wrapperPath.classList.remove("show-text");
-//   });
-// }
 //? MAIN PROJECTS HOVER EFFECT - END
 
 //? -----------------------------
 
 //? PROJECT CODE LINK HOVER EFFECT - GITHUB
-const projectDescription = document.querySelector(".project-description");
+// const projectDescription = document.querySelector(".project-description");
+const codeLinks = document.querySelectorAll(".code-link");
+const borderStyleEffect = "5px solid white";
+const borderEffectTransition = "all 200ms linear";
 
-window.addEventListener("mouseover", (e) => {
-  const closest = e.target.closest(".fa-code");
-  if (closest) {
-    e.target.offsetParent.parentNode.style.borderBottom = "5px solid white";
-    e.target.offsetParent.parentNode.style.transition = "all 200ms linear";
-  }
-
-  setTimeout(() => {
-    e.target.offsetParent.parentNode.style.borderBottom = "";
-  }, 500);
-
-  return;
+codeLinks.forEach((link) => {
+  link.addEventListener("mouseover", (e) => {
+    e.target.offsetParent.style.borderBottom = `${borderStyleEffect}`;
+    e.target.offsetParent.style.transition = `${borderEffectTransition}`;
+    setTimeout(() => {
+      e.target.offsetParent.style.borderBottom = "";
+    });
+  });
 });
+
 //? PROJECT CODE LINK HOVER EFFECT - END
 
 //? -----------------------------

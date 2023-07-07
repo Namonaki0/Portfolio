@@ -32,7 +32,7 @@ html {
   font-family: var(--defaultText);
   scroll-behavior: smooth;
   text-align: center;
-  scroll-padding: 30px;
+  scroll-padding: 200px;
 }
 
 ::-webkit-scrollbar {
@@ -245,7 +245,7 @@ h2 {
   height: auto;
   margin: 0 auto;
   display: block;
-  --transform: translateY(-10px);
+  --transform: var(--transform);
   animation: loadingProfile var(--duration) linear;
 }
 
@@ -265,7 +265,6 @@ h2 {
 
 .profile-welcome {
   font-size: 2.8rem;
-  display: contents;
 }
 
 .contact-wrapper {
@@ -273,7 +272,12 @@ h2 {
   justify-content: flex-start;
   margin: 2rem 0;
   padding: 2rem 0;
-  animation: loadingProfile calc(var(--duration) + 180ms) linear var(--delay);
+}
+
+.profile-welcome,
+.contact-wrapper,
+.tools-list .tool {
+ animation: loadingProfile calc(var(--duration) + 180ms) linear var(--delay);
 }
 
 .tools-wrapper {
@@ -284,10 +288,6 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   list-style: none
-}
-
-.tools-list .tool {
-
 }
 
 .social-links {
@@ -993,7 +993,8 @@ h1::after {
 
 .nuxt-icon,
 .graphql-icon,
-.mongo-db {
+.mongo-db-icon,
+.typescript-icon {
   transition: all 100ms linear;
 }
 
@@ -1005,8 +1006,12 @@ h1::after {
     color: #00BB87
 }
 
-.mongo-db:hover {
+.mongo-db-icon:hover {
     color: #3F8E41;
+}
+
+.typescript-icon:hover {
+  color: #2F74C0;
 }
 
 .field-set-wrapper {

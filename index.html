@@ -5,7 +5,20 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="projectPictures/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
 
     <!--? DESCRIPTION -->
     <meta name="description" content="Andre Ferreira's personal porfolio" />
@@ -29,6 +42,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-app.min.js"></script>
 
     <title>Andre Ferreira - Portfolio</title>
   </head>
@@ -74,8 +90,6 @@
           />
         </div>
         <div class="profile-details">
-          <!-- <p class="name">Andre Ferreira</p>
-          <p class="job-title">Frontend Web Developer</p> -->
           <p class="profile-welcome">Hi, welcome to my portfolio</p>
           <blockquote class="profile-description">
             <iconify-icon
@@ -187,6 +201,7 @@
     </section>
 
     <!--? MAIN PROJECTS -->
+    <main id="projects"></main>
     <main class="section main-projects">
       <h1 class="main-projects-title">main projects</h1>
 
@@ -737,7 +752,20 @@
     </footer>
 
     <script src="app.js"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="database.js" type="module"></script>
+
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+    ></script>
   </body>
 </html>
 

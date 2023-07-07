@@ -337,6 +337,11 @@ h2 {
   justify-content: flex;
 }
 
+.email {
+  padding: 0;
+  font-size: 1.5rem;
+}
+
 .linkedin {
   color: #0077b5;
 }
@@ -487,7 +492,7 @@ iconify-icon.speech-mark-right {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     text-align: left;
-    margin-right: auto;
+    margin-right: 1.5rem;
   }
 
   .email-wrapper,
@@ -1364,9 +1369,9 @@ fieldset {
   color: var(--highlight);
   text-align: left;
   margin-left: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 2rem;
   font-family: var(--descText);
-  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 

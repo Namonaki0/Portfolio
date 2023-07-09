@@ -11,11 +11,78 @@ let firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-let database = firebase.database();
+let projectsRef = firebase.database().ref("projects");
 
-let firebaseRef = database.ref("projects/");
-firebaseRef.on("value", function (snapshot) {
+projectsRef.on("value", function (snapshot) {
+  const projects = [];
   let data = snapshot.val();
+  for (let project in data) {
+    projects.push(data[project]);
+  }
+  getProjectInfo(projects);
+}),
+  function (error) {
+    console.error("Error: " + error.code);
+  };
 
-  console.log(data);
-});
+const mainProjects = document.querySelector("#main-projects");
+
+async function getProjectInfo(projects) {
+  const tech = [];
+
+  projects.map((p) => {
+    if (p.hasOwnProperty("technologies")) {
+      tech.push(Object.values(p.technologies));
+    }
+  });
+  console.log(tech);
+
+  const projectInfo = projects.map((p) => p);
+
+  projectInfo.forEach((project) => {
+    if (project.type === "main") {
+      mainProjects.innerHTML += `
+              <div class="project main-project-react">
+                  <div class="image-wrapper" id="main-project-image">
+                    <a
+                      class="main-project-cta"
+                      href="https://www.andreferreiradev-movielibrary.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span class="main-project-span">EXPLORE</span>
+                      <img
+                        src="${project.image}"
+                        alt="movie library still picture"
+                      />
+                    </a>
+                  </div>
+        
+                  <div class="project-description">
+                    <h2 class="main-project-title">${project.name}</h2>
+                    <p>${project.description}</p>
+                    <span>
+                      ${project.highlights}
+                    </span>
+                    <div class="project-technologies">
+                      <i class="fab fa-${project.tech}" title="ReactJS"></i>
+                      
+                    </div>
+                    <a
+                      class="code-link"
+                      href="${project.url}"
+                      target="_blank"
+                      rel="noreferrer"
+                      title="code"
+                      ><i class="fa-solid fa-code"></i
+                    ></a>
+                  </div>
+              </div>
+          `;
+    }
+  });
+}
+
+// var ldld = new ldLoader({ root: "#example" });
+// /* 4. active this loader */
+// ldld.on();

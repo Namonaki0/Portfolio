@@ -35,18 +35,30 @@ async function getProjectInfo(projects) {
       tech.push(Object.values(p.technologies));
     }
   });
-  console.log(tech);
 
   const projectInfo = projects.map((p) => p);
 
-  projectInfo.forEach((project) => {
+  projectInfo.forEach((project, i) => {
+    let val = "";
+
+    for (const value of tech[i]) {
+      val += `                        
+        <iconify-icon
+          icon="bxl:${value}"
+          width="40"
+          height="40"
+          title="${value}"
+          class="${value}-icon"
+        ></iconify-icon>`;
+    }
+
     if (project.type === "main") {
       mainProjects.innerHTML += `
               <div class="project main-project-react">
                   <div class="image-wrapper" id="main-project-image">
                     <a
                       class="main-project-cta"
-                      href="https://www.andreferreiradev-movielibrary.com"
+                      href="${project.url}"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -65,8 +77,8 @@ async function getProjectInfo(projects) {
                       ${project.highlights}
                     </span>
                     <div class="project-technologies">
-                      <i class="fab fa-${project.tech}" title="ReactJS"></i>
-                      
+                      ${val}
+      
                     </div>
                     <a
                       class="code-link"

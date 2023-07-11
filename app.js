@@ -86,3 +86,19 @@ setTimeout(() => {
     });
   });
 }, 2000);
+
+const usesBtn = document.querySelector(".uses-btn");
+const sidePanel = document.querySelector(".side-panel");
+const closeArrow = document.querySelector(".close-arrow");
+
+usesBtn.addEventListener("click", () => {
+  sidePanel.classList.add("show-panel");
+  // document.body.style.width = "60%";
+});
+
+closeArrow.addEventListener("click", () => {
+  sidePanel.classList.remove("show-panel");
+  // document.body.style.width = "100%";
+});
+
+console.log(sidePanel);

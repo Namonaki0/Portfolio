@@ -550,29 +550,6 @@ iconify-icon.speech-mark-right {
   .contact-wrapper {
     display: flex;
   }
-
-  .font-awesome-icon {
-    display: block;
-    text-align: right;
-    position: relative;
-  }
-
-  .font-awesome-icon::after {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f121";
-    font-size: 35rem;
-    position: absolute;
-    top: -50px;
-    right: -150px;
-    color: rgba(158, 158, 158, 0.027);
-    color: #42425c44;
-  }
 }
 
 @media (min-width: 1600px) {
@@ -582,7 +559,6 @@ iconify-icon.speech-mark-right {
 }
 
 /*? MAIN PROJECTS */
-
 .main-projects {
   background: var(--mainProjects);
 }
@@ -625,7 +601,7 @@ h1::after {
 }
 
 .main-project {
-  animation: loadingProject 150ms linear;
+  animation: loadingProjects 150ms linear;
 }
 
 .project {
@@ -636,6 +612,7 @@ h1::after {
   width: 100%;
   border-radius: unset;
   transition: all 150ms ease-in-out;
+  opacity: 0;
 }
 
 .main-project-image img:hover {
@@ -828,7 +805,7 @@ h1::after {
 @keyframes loadingProjects {
   0% {
     opacity: var(--opacity);
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
 
   100% {
@@ -973,26 +950,26 @@ h1::after {
   display: flex;
 }
 
-.nuxt-icon,
-.graphql-icon,
-.mongo-db-icon,
-.typescript-icon {
+.nuxt-tech-icon,
+.graphql-tech-icon,
+.mongo-db-tech-icon,
+.typescript-tech-icon {
   transition: all 100ms linear;
 }
 
-.graphql-icon:hover {
+.graphql-tech-icon:hover {
   color: #d932a2;
 }
 
-.nuxt-icon:hover {
+.nuxt-tech-icon:hover {
   color: #00bb87;
 }
 
-.mongo-db-icon:hover {
+.mongo-db-tech-icon:hover {
   color: #3f8e41;
 }
 
-.typescript-icon:hover {
+.typescript-tech-icon:hover {
   color: #2f74c0;
 }
 
@@ -1296,7 +1273,7 @@ fieldset {
   .mini-projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 3rem;
+    gap: 1rem 3rem;
     justify-content: center;
   }
 
@@ -1548,6 +1525,66 @@ footer {
   }
 }
 
-#example {
-  height: 100px;
+.projects-loading {
+  padding: 10rem;
+}
+
+/* SIDE PANEL */
+.side-panel {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--mainProjects);
+  z-index: 1000;
+  transform: translateX(0%);
+  box-shadow: 5px -2px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: all 150ms linear;
+  padding: 5rem;
+  overflow-y: scroll;
+}
+
+.close-arrow {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.show-panel {
+  transform: translateX(0%);
+}
+
+.uses-information {
+  display: block;
+  text-align: center;
+  width: inherit;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .side-panel {
+    transform: translateX(100%);
+  }
+
+  .show-panel {
+    transform: translateX(60%);
+  }
+
+  .uses-information {
+    padding: 2rem;
+  }
+}
+
+.uses-style {
+  border-bottom: 4px solid var(--highlight);
+  padding: 5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.uses-icon {
+  margin: 0 1rem 2rem;
+  /* transform: rotate(65deg); */
 }

@@ -20,6 +20,7 @@ loadingAnimation.innerHTML += `
      <iconify-icon
         icon="svg-spinners:blocks-wave"
         width="100"
+        class="projects-loading"
       >
 `;
 
@@ -64,6 +65,7 @@ async function getProjectInfo(projects) {
 
     if (project.type === "main") {
       loadingAnimation.style.display = "none";
+      mainProjects.style.opacity = 1;
       mainProjects.innerHTML += `
               <div class="project main-project">
                   <div class="image-wrapper main-project-image">
@@ -77,6 +79,7 @@ async function getProjectInfo(projects) {
                       <img
                         src="${project.image}"
                         alt="movie library still picture"
+                        class="project-image"
                       />
                     </a>
                   </div>
@@ -105,3 +108,11 @@ async function getProjectInfo(projects) {
     }
   });
 }
+
+setTimeout(() => {
+  const mainProject = document.querySelectorAll(".main-project");
+  const projectImage = document.querySelectorAll(".project-image");
+
+  mainProject.forEach((p) => (p.style.opacity = 1));
+  projectImage.forEach((p) => (p.style.opacity = 1));
+}, 2500);

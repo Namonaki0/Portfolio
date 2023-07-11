@@ -228,28 +228,28 @@
           width="50"
           height="50"
           title="Nuxt.js"
-          class="nuxt-icon"
+          class="nuxt-tech-icon"
         ></iconify-icon>
         <iconify-icon
           icon="teenyicons:graphql-outline"
           width="50"
           height="50"
           title="GraphQL"
-          class="graphql-icon"
+          class="graphql-tech-icon"
         ></iconify-icon>
         <iconify-icon
           icon="teenyicons:mongodb-outline"
           width="50"
           height="50"
           title="MongoDB"
-          class="mongo-db-icon"
+          class="mongo-db-tech-icon"
         ></iconify-icon>
         <iconify-icon
           icon="teenyicons:typescript-outline"
           width="50"
           height="50"
           title="TypeScript"
-          class="typescript-icon"
+          class="typescript-tech-icon"
         ></iconify-icon>
       </div>
       <div class="field-set-wrapper">
@@ -393,6 +393,26 @@
           </div>
         </div>
       </div>
+      <!--? MINI PROJECT FIVE -->
+      <div class="mini-project mini-project-four">
+        <div class="mini-image-wrapper" id="mini-project-image">
+          <a
+            href="https://pokedex-af.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="./assets/images/pokedex.PNG" alt="pokedex app picture" />
+            <span class="knockout-text">POKEDEX</span>
+          </a>
+        </div>
+        <div class="mini-project-description">
+          <h2>#5</h2>
+          <div class="mini-project-description-topic">
+            <p>Search for any pokemon</p>
+            <span>PWA | search input | error handling</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section communication-wrapper" id="communication-wrapper">
@@ -423,9 +443,9 @@
     </div>
 
     <!-- PRE-FOOTER -->
-    <!-- <div class="pre-footer">
+    <div class="pre-footer">
       external links:
-      <div class="pre-footer-wrapper">
+      <!-- <div class="pre-footer-wrapper">
         <ul class="external-links">
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Lorem ipsum dolor sit amet.</li>
@@ -473,8 +493,9 @@
             firebase
           </li>
         </ul>
-      </div>
-    </div> -->
+      </div> -->
+      <button class="uses-btn">uses</button>
+    </div>
     <!-- PRE-FOOTER -->
     <!--? FOOTER -->
     <footer>
@@ -507,6 +528,80 @@
         ></a>
       </div>
     </footer>
+    <div class="side-panel">
+      <iconify-icon
+        icon="ion:return-up-forward-sharp"
+        width="30"
+        title="close arrow"
+        class="close-arrow"
+      ></iconify-icon>
+      <div>
+        <p>USES:</p>
+      </div>
+      <section>
+        <div class="uses-information">
+          <div class="uses-style">
+            <iconify-icon
+              icon="devicon:html5"
+              width="50"
+              title="HTML"
+              class="uses-icon"
+            ></iconify-icon>
+
+            <iconify-icon
+              icon="devicon:css3"
+              width="50"
+              title="CSS"
+              class="uses-icon"
+            ></iconify-icon>
+
+            <iconify-icon
+              icon="vscode-icons:file-type-js-official"
+              width="50"
+              title="JavaScript"
+              class="uses-icon"
+            ></iconify-icon>
+            <p>This portfolio was built with HMTL, CSS, and Vanilla JS</p>
+          </div>
+          <div class="uses-style">
+            <iconify-icon
+              icon="skill-icons:netlify-dark"
+              width="60"
+              title="netlify"
+              class="uses-icon"
+            ></iconify-icon>
+            <iconify-icon
+              icon="skill-icons:git"
+              width="60"
+              title="git"
+              class="uses-icon"
+            ></iconify-icon>
+            <p>Netlify used for deployment and Git for version control</p>
+          </div>
+          <div class="uses-style">
+            <iconify-icon
+              icon="logos:lighthouse"
+              width="70"
+              title="lighthouse"
+              class="uses-icon"
+            ></iconify-icon>
+            <p>
+              Performance, SEO, accessibility and best practices tested with
+              Lighthouse
+            </p>
+          </div>
+          <div class="uses-style">
+            <iconify-icon
+              icon="vscode-icons:file-type-firebase"
+              width="70"
+              title="firebase"
+              class="uses-icon"
+            ></iconify-icon>
+            <p>Firebase's Realtime database used for data storage</p>
+          </div>
+        </div>
+      </section>
+    </div>
     <script
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"

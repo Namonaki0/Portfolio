@@ -13,19 +13,28 @@ firebase.initializeApp(firebaseConfig);
 
 let projectsRef = firebase.database().ref("projects");
 
-projectsRef.on("value", function (snapshot) {
+const mainProjects = document.querySelector("#main-projects");
+const loadingAnimation = document.querySelector(".loading-animation");
+
+loadingAnimation.innerHTML += `
+     <iconify-icon
+        icon="svg-spinners:blocks-wave"
+        width="100"
+      >
+`;
+
+projectsRef.on("value", (snapshot) => {
   const projects = [];
   let data = snapshot.val();
+
   for (let project in data) {
     projects.push(data[project]);
   }
   getProjectInfo(projects);
 }),
-  function (error) {
-    console.error("Error: " + error.code);
+  (err) => {
+    console.error("Error: " + err.code);
   };
-
-const mainProjects = document.querySelector("#main-projects");
 
 async function getProjectInfo(projects) {
   const tech = [];
@@ -49,13 +58,15 @@ async function getProjectInfo(projects) {
           height="40"
           title="${value}"
           class="${value}-icon"
-        ></iconify-icon>`;
+        ></iconify-icon>
+      `;
     }
 
     if (project.type === "main") {
+      loadingAnimation.style.display = "none";
       mainProjects.innerHTML += `
-              <div class="project main-project-react">
-                  <div class="image-wrapper" id="main-project-image">
+              <div class="project main-project">
+                  <div class="image-wrapper main-project-image">
                     <a
                       class="main-project-cta"
                       href="${project.url}"
@@ -82,7 +93,7 @@ async function getProjectInfo(projects) {
                     </div>
                     <a
                       class="code-link"
-                      href="${project.url}"
+                      href="${project.code}"
                       target="_blank"
                       rel="noreferrer"
                       title="code"
@@ -94,7 +105,3 @@ async function getProjectInfo(projects) {
     }
   });
 }
-
-// var ldld = new ldLoader({ root: "#example" });
-// /* 4. active this loader */
-// ldld.on();

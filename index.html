@@ -43,18 +43,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/loadingio/ldLoader@v1.0.0/dist/ldld.min.js"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/loadingio/ldLoader@v1.0.0/dist/ldld.min.css"
-    />
-
-    <link rel="stylesheet" type="text/css" href="ldld.css" />
-    <script src="ldld.js"></script>
-
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
     <title>Andre Ferreira - Portfolio</title>
@@ -92,7 +80,6 @@
 
     <!--? PROFILE -->
     <section class="profile" id="profile">
-      <div class="font-awesome-icon"></div>
       <div class="profile-wrapper">
         <div class="profile-pic-wrapper">
           <img
@@ -196,14 +183,24 @@
                 class="github"
                 target="_blank"
                 rel="noreferrer"
-                ><i class="fab fa-github"></i
+              >
+                <iconify-icon
+                  icon="bxl:github"
+                  width="40"
+                  title="Github"
+                ></iconify-icon
               ></a>
               <a
                 href="https://www.linkedin.com/in/andre-ferreira-37835b53/"
                 target="_blank"
                 rel="noreferrer"
                 class="linkedin"
-                ><i class="fab fa-linkedin"></i
+              >
+                <iconify-icon
+                  icon="bxl:linkedin-square"
+                  width="40"
+                  title="linkedIn"
+                ></iconify-icon
               ></a>
             </div>
           </div>
@@ -213,16 +210,12 @@
 
     <!--? MAIN PROJECTS -->
     <main id="projects"></main>
-    <!-- <div id="example" class="text-danger ldld bare">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum deleniti
-        quod consequatur, inventore repellendus expedita dignissimos provident
-        corporis sequi facilis.
-      </p>
-    </div> -->
+
     <main class="section main-projects">
-      <h1 class="main-projects-title">main projects</h1>
-      <div class="inner-main-projects" id="main-projects"></div>
+      <div class="inner-main-projects" id="main-projects">
+        <h1 class="main-projects-title">main projects</h1>
+        <div class="loading-animation"></div>
+      </div>
     </main>
 
     <!--? PERSONAL DEVELOPMENT -->

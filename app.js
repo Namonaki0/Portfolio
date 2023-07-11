@@ -57,39 +57,32 @@ sections.forEach((section) => {
 });
 //? INTERSECTION OBSERVER - END
 
-//? -----------------------------
+setTimeout(() => {
+  //? MAIN PROJECTS HOVER EFFECT
+  const mainImageWrappers = document.querySelectorAll(".main-project-image");
 
-//? MAIN PROJECTS HOVER EFFECT
-const mainImageWrappers = document.querySelectorAll("#main-project-image");
-
-mainImageWrappers.forEach((wrapper) => {
-  wrapper.addEventListener("mouseover", (e) => {
-    e.target.previousElementSibling.classList.add("show-text");
+  mainImageWrappers.forEach((wrapper) => {
+    wrapper.addEventListener("mouseover", (e) => {
+      e.target.previousElementSibling.classList.add("show-text");
+    });
+    wrapper.addEventListener("mouseout", (e) => {
+      e.target.previousElementSibling.classList.remove("show-text");
+    });
   });
-  wrapper.addEventListener("mouseout", (e) => {
-    e.target.previousElementSibling.classList.remove("show-text");
-  });
-});
-//? MAIN PROJECTS HOVER EFFECT - END
 
-//? -----------------------------
+  const codeLinks = document.querySelectorAll(".code-link");
+  const borderStyleEffect = "5px solid white";
+  const borderEffectTransition = "border 200ms linear";
 
-//? PROJECT CODE LINK HOVER EFFECT - GITHUB
-// const projectDescription = document.querySelector(".project-description");
-const codeLinks = document.querySelectorAll(".code-link");
-const borderStyleEffect = "5px solid white";
-const borderEffectTransition = "all 200ms linear";
-
-codeLinks.forEach((link) => {
-  link.addEventListener("mouseover", (e) => {
-    e.target.offsetParent.style.borderBottom = `${borderStyleEffect}`;
-    e.target.offsetParent.style.transition = `${borderEffectTransition}`;
-    setTimeout(() => {
+  // //? PROJECT CODE LINK HOVER EFFECT - GITHUB
+  codeLinks.forEach((link) => {
+    link.addEventListener("mouseover", (e) => {
+      e.stopPropagation();
+      e.target.offsetParent.style.borderBottom = `${borderStyleEffect}`;
+      e.target.offsetParent.style.transition = `${borderEffectTransition}`;
+    });
+    link.addEventListener("mouseleave", (e) => {
       e.target.offsetParent.style.borderBottom = "";
     });
   });
-});
-
-//? PROJECT CODE LINK HOVER EFFECT - END
-
-//? -----------------------------
+}, 2000);

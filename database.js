@@ -1,5 +1,7 @@
+import { API_KEY as key } from "/keys.js";
+
 let firebaseConfig = {
-  apiKey: "AIzaSyA8660nDNjjbGnxuIe5v7KbbvZVgCTLpDw",
+  apiKey: key,
   authDomain: "portfolio-v1-dba00.firebaseapp.com",
   databaseURL:
     "https://portfolio-v1-dba00-default-rtdb.europe-west1.firebasedatabase.app/",
@@ -12,6 +14,7 @@ let firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let projectsRef = firebase.database().ref("projects");
+let imagesRef = firebase.storage().ref("images/");
 
 const mainProjects = document.querySelector("#main-projects");
 const loadingAnimation = document.querySelector(".loading-animation");
@@ -115,4 +118,4 @@ setTimeout(() => {
 
   mainProject.forEach((p) => (p.style.opacity = 1));
   projectImage.forEach((p) => (p.style.opacity = 1));
-}, 2200);
+}, 2500);

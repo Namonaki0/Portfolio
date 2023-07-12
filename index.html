@@ -426,6 +426,7 @@
       </div>
 
       <div class="form-wrapper">
+        <div class="form-submitted-message">submitted, thank you!</div>
         <form
           action=""
           method="POST"
@@ -434,9 +435,19 @@
           data-netlify="true"
           id="contact-form"
         >
-          <input type="text" name="name" placeholder="name..." />
-          <input type="email" name="email" placeholder="email..." />
-          <textarea name="message" placeholder="enter message..."></textarea>
+          <input
+            type="text"
+            name="name"
+            class="form-name"
+            placeholder="name..."
+            required
+          />
+          <input type="email" name="email" placeholder="email..." required />
+          <textarea
+            name="message"
+            placeholder="enter message..."
+            required
+          ></textarea>
           <button type="submit">send</button>
         </form>
       </div>
@@ -444,59 +455,20 @@
 
     <!-- PRE-FOOTER -->
     <div class="pre-footer">
-      <p>extra information:</p>
+      <p class="pre-footer-title">extra information:</p>
       <div class="pre-footer-ctas">
-        <button class="uses-btn pre-footer-cta">uses</button>
+        <button class="pre-footer-title pre-footer-cta" data-extra="experience">
+          professional experience
+        </button>
+        <button class="uses-btn pre-footer-cta" data-extra="uses">uses</button>
+        <!-- <div> -->
+        <!-- <div>
+            9 months of professional experience as a Frontend developer for Paul
+            Smith, Ltd.
+          </div> -->
+        <!-- </div> -->
+        <button class="pre-footer-cta">resume</button>
       </div>
-      <!-- <div class="pre-footer-wrapper">
-        <ul class="external-links">
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
-        <ul class="built-on">
-          <span>built with:</span>
-
-          <li class="built-on-tool">
-            <iconify-icon
-              icon="devicon-plain:html5"
-              style="color: #707070"
-              width="30"
-              title="HTML"
-            ></iconify-icon>
-            html
-          </li>
-          <li class="built-on-tool">
-            <iconify-icon
-              icon="devicon-plain:css3"
-              style="color: #707070"
-              width="30"
-              title="CSS"
-            ></iconify-icon>
-            css
-          </li>
-          <li class="built-on-tool">
-            <iconify-icon
-              icon="devicon-plain:javascript"
-              style="color: #707070"
-              width="30"
-              title="JavaScript"
-            ></iconify-icon>
-            javascript
-          </li>
-          <li class="built-on-tool">
-            <iconify-icon
-              icon="devicon-plain:firebase"
-              style="color: #707070"
-              width="40"
-              title="firebase"
-            ></iconify-icon>
-            firebase
-          </li>
-        </ul>
-      </div> -->
     </div>
     <!-- PRE-FOOTER -->
     <!--? FOOTER -->
@@ -537,72 +509,7 @@
         title="close"
         class="close-arrow"
       ></iconify-icon>
-      <div>
-        <p>USES:</p>
-      </div>
-      <section>
-        <div class="uses-information">
-          <div class="uses-style">
-            <iconify-icon
-              icon="devicon:html5"
-              width="50"
-              title="HTML"
-              class="uses-icon"
-            ></iconify-icon>
-
-            <iconify-icon
-              icon="devicon:css3"
-              width="50"
-              title="CSS"
-              class="uses-icon"
-            ></iconify-icon>
-
-            <iconify-icon
-              icon="vscode-icons:file-type-js-official"
-              width="50"
-              title="JavaScript"
-              class="uses-icon"
-            ></iconify-icon>
-            <p>This portfolio was built with HMTL, CSS, and Vanilla JS</p>
-          </div>
-          <div class="uses-style">
-            <iconify-icon
-              icon="skill-icons:netlify-dark"
-              width="60"
-              title="netlify"
-              class="uses-icon"
-            ></iconify-icon>
-            <iconify-icon
-              icon="skill-icons:git"
-              width="60"
-              title="git"
-              class="uses-icon"
-            ></iconify-icon>
-            <p>Netlify used for deployment and Git for version control</p>
-          </div>
-          <div class="uses-style">
-            <iconify-icon
-              icon="logos:lighthouse"
-              width="70"
-              title="lighthouse"
-              class="uses-icon"
-            ></iconify-icon>
-            <p>
-              Performance, SEO, accessibility and best practices tested with
-              Lighthouse
-            </p>
-          </div>
-          <div class="uses-style">
-            <iconify-icon
-              icon="vscode-icons:file-type-firebase"
-              width="70"
-              title="firebase"
-              class="uses-icon"
-            ></iconify-icon>
-            <p>Firebase's Realtime database used for data storage</p>
-          </div>
-        </div>
-      </section>
+      <div class="side-panel-info"></div>
     </div>
     <div class="background-filter"></div>
     <script
@@ -617,9 +524,14 @@
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
     ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"
+    ></script>
 
-    <script defer src="app.js"></script>
+    <script defer src="app.js" type="module"></script>
     <script defer src="database.js" type="module"></script>
+    <script defer src="extra/uses.js" type="module"></script>
   </body>
 </html>
 

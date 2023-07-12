@@ -334,9 +334,9 @@ h2 {
   font-size: 1.5rem;
 }
 
-  .phone-number {
-    color: rgb(194, 194, 194);
-  }
+.phone-number {
+  color: rgb(194, 194, 194);
+}
 
 .profile-description {
   position: relative;
@@ -1389,6 +1389,32 @@ form textarea {
   color: rgba(214, 214, 214, 0.63);
 }
 
+.form-wrapper {
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.form-submitted-message {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  font-size: large;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: all 150ms linear;
+}
+
+.form-submission-success {
+  transform: translateX(0%);
+  background: green;
+}
+
+/* .form-name:required:invalid {
+      outline: 1px solid red;
+  } */
+
 @media (min-width: 900px) {
   .communication-wrapper {
     display: flex;
@@ -1425,19 +1451,47 @@ form textarea {
 /*? PRE-FOOTER */
 .pre-footer {
   font-size: large;
-  text-transform: uppercase;
-  height: 250px;
-  text-align: left;
+  /* height: 250px; */
+  text-align: center;
   padding: 4rem;
+  /* display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; */
+}
+
+.pre-footer-title {
+  text-transform: uppercase;
 }
 
 .pre-footer > p {
-  font-style: italic;
-  margin-bottom: 1rem;
+  /* font-style: italic; */
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .pre-footer-ctas .pre-footer-cta {
+  all: unset;
   font-size: small;
+  /* margin: auto; */
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--highlight);
+  width: max-content;
+  cursor: pointer;
+  transition: all 150ms linear;
+}
+
+.pre-footer-ctas .pre-footer-cta:hover {
+  border-left: 6px solid var(--highlight);
+}
+
+.pre-footer-ctas {
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+  /* padding: 5rem
+    width: 30%; */
 }
 /* 
 
@@ -1564,6 +1618,7 @@ footer {
   left: 40px;
   top: 20px;
   cursor: pointer;
+  z-index: 10000;
 }
 
 .show-panel {
@@ -1575,6 +1630,7 @@ footer {
   text-align: center;
   margin: 0 auto;
   width: 100%;
+  pointer-events: none;
 }
 
 @media (min-width: 1024px) {
@@ -1602,12 +1658,7 @@ footer {
   /* transform: rotate(65deg); */
 }
 
-.uses-btn {
-  all: unset;
-  cursor: pointer;
-}
-
-.background-filter {  
+.background-filter {
   display: none;
   position: fixed;
   z-index: 1000;

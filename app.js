@@ -1,6 +1,7 @@
+import { uses, experience } from "/extra/uses.js";
+
 //? MENU SCROLL EFFECT
 const header = document.querySelector("header");
-const logo = document.querySelector("logo");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
@@ -13,9 +14,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-//? MENU SCROLL EFFECT - END
-
-//? -----------------------------
 
 //? MENU LINKS - INTERSECTION OBSERVER
 const mainProjectsLink = document.querySelector(".main-projects-cta");
@@ -23,13 +21,12 @@ const miniProjectsLink = document.querySelector(".mini-projects-cta");
 const communicationsLink = document.querySelector(".communication-link-cta");
 const sections = document.querySelectorAll(".section");
 
-//? PARAMS
 let options = {
   threshold: 0.5,
   rootMargin: "0px",
 };
 
-observer = new IntersectionObserver(entries, options);
+let observer = new IntersectionObserver(entries, options);
 
 function entries(sections) {
   sections.forEach((section) => {
@@ -55,7 +52,6 @@ function entries(sections) {
 sections.forEach((section) => {
   observer.observe(section);
 });
-//? INTERSECTION OBSERVER - END
 
 setTimeout(() => {
   //? MAIN PROJECTS HOVER EFFECT
@@ -90,16 +86,11 @@ setTimeout(() => {
 //? SIDE PANEL AND BACKGROUND FILTER
 const usesBtn = document.querySelector(".uses-btn");
 const sidePanel = document.querySelector(".side-panel");
+const sidePanelInfo = document.querySelector(".side-panel-info");
 const closeArrow = document.querySelector(".close-arrow");
 const backgroundFilter = document.querySelector(".background-filter");
 
-usesBtn.addEventListener("click", () => {
-  sidePanel.classList.add("show-panel");
-  backgroundFilter.style.display = "block";
-  document.body.style.overflowY = "hidden";
-});
-
-closeArrow.addEventListener("click", () => {
+closeArrow.addEventListener("click", (e) => {
   sidePanel.classList.remove("show-panel");
   backgroundFilter.style.display = "none";
   document.body.style.overflowY = "";
@@ -109,4 +100,52 @@ backgroundFilter.addEventListener("click", () => {
   sidePanel.classList.remove("show-panel");
   backgroundFilter.style.display = "none";
   document.body.style.overflowY = "";
+});
+
+//? PRE-FOOTER EXTRA INFO
+const footerCta = document.querySelectorAll(".pre-footer-cta");
+
+footerCta.forEach((cta) => {
+  cta.addEventListener("click", (e) => {
+    sidePanel.classList.add("show-panel");
+    backgroundFilter.style.display = "block";
+    document.body.style.overflowY = "hidden";
+    const dataset = e.target.dataset.extra;
+
+    if (dataset === undefined) {
+      sidePanel.classList.remove("show-panel");
+      backgroundFilter.style.display = "none";
+      document.body.style.overflowY = "";
+    }
+
+    switch (dataset) {
+      case "uses":
+        sidePanelInfo.innerHTML = uses;
+        break;
+      case "experience":
+        sidePanelInfo.innerHTML = experience;
+        break;
+      default:
+        sidePanelInfo.innerHTML = "";
+        break;
+    }
+  });
+});
+
+//? CONTACT FORM
+const contactForm = document.querySelector("#contact-form");
+const formSubmittedMessage = document.querySelector(".form-submitted-message");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  formSubmittedMessage.style.opacity = 1;
+  formSubmittedMessage.classList.add("form-submission-success");
+  setTimeout(() => {
+    formSubmittedMessage.style.opacity = 0;
+    contactForm.reset();
+  }, 2000);
+  setTimeout(() => {
+    formSubmittedMessage.classList.remove("form-submission-success");
+  }, 3000);
 });

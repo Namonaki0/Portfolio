@@ -74,7 +74,7 @@ setTimeout(() => {
   const borderStyleEffect = "5px solid white";
   const borderEffectTransition = "border 200ms linear";
 
-  // //? PROJECT CODE LINK HOVER EFFECT - GITHUB
+  //? PROJECT CODE LINK HOVER EFFECT - GITHUB
   codeLinks.forEach((link) => {
     link.addEventListener("mouseover", (e) => {
       e.stopPropagation();
@@ -87,18 +87,26 @@ setTimeout(() => {
   });
 }, 2000);
 
+//? SIDE PANEL AND BACKGROUND FILTER
 const usesBtn = document.querySelector(".uses-btn");
 const sidePanel = document.querySelector(".side-panel");
 const closeArrow = document.querySelector(".close-arrow");
+const backgroundFilter = document.querySelector(".background-filter");
 
 usesBtn.addEventListener("click", () => {
   sidePanel.classList.add("show-panel");
-  // document.body.style.width = "60%";
+  backgroundFilter.style.display = "block";
+  document.body.style.overflowY = "hidden";
 });
 
 closeArrow.addEventListener("click", () => {
   sidePanel.classList.remove("show-panel");
-  // document.body.style.width = "100%";
+  backgroundFilter.style.display = "none";
+  document.body.style.overflowY = "";
 });
 
-console.log(sidePanel);
+backgroundFilter.addEventListener("click", () => {
+  sidePanel.classList.remove("show-panel");
+  backgroundFilter.style.display = "none";
+  document.body.style.overflowY = "";
+});

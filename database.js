@@ -115,4 +115,4 @@ setTimeout(() => {
 
   mainProject.forEach((p) => (p.style.opacity = 1));
   projectImage.forEach((p) => (p.style.opacity = 1));
-}, 2500);
+}, 2200);

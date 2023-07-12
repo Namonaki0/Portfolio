@@ -49,6 +49,7 @@ body {
   background: var(--miniProjects);
   color: var(--defaultColor);
   overflow-x: hidden;
+  transition: all 150ms linear;
 }
 
 p {
@@ -333,6 +334,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+  .phone-number {
+    color: rgb(194, 194, 194);
+  }
+
 .profile-description {
   position: relative;
   font-size: 1.5rem;
@@ -407,10 +412,6 @@ iconify-icon.speech-mark-right {
 
   .email {
     padding: 0;
-  }
-
-  .phone-number {
-    color: rgb(194, 194, 194);
   }
 
   .social-links {
@@ -1422,11 +1423,24 @@ form textarea {
 }
 
 /*? PRE-FOOTER */
-/* 
 .pre-footer {
+  font-size: large;
+  text-transform: uppercase;
   height: 250px;
   text-align: left;
+  padding: 4rem;
 }
+
+.pre-footer > p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.pre-footer-ctas .pre-footer-cta {
+  font-size: small;
+}
+/* 
+
 
 .pre-footer-wrapper {
   display: flex;
@@ -1537,8 +1551,8 @@ footer {
   right: 0;
   bottom: 0;
   background: var(--mainProjects);
-  z-index: 1000;
-  transform: translateX(0%);
+  z-index: 10000;
+  transform: translateX(100%);
   box-shadow: 5px -2px 5px 5px rgba(0, 0, 0, 0.5);
   transition: all 150ms linear;
   padding: 5rem;
@@ -1547,8 +1561,8 @@ footer {
 
 .close-arrow {
   position: absolute;
-  left: 20px;
-  top: 10px;
+  left: 40px;
+  top: 20px;
   cursor: pointer;
 }
 
@@ -1559,18 +1573,17 @@ footer {
 .uses-information {
   display: block;
   text-align: center;
-  width: inherit;
   margin: 0 auto;
   width: 100%;
 }
 
 @media (min-width: 1024px) {
   .side-panel {
-    transform: translateX(100%);
+    width: 40%;
   }
 
   .show-panel {
-    transform: translateX(60%);
+    transform: translateX(0%);
   }
 
   .uses-information {
@@ -1587,4 +1600,18 @@ footer {
 .uses-icon {
   margin: 0 1rem 2rem;
   /* transform: rotate(65deg); */
+}
+
+.uses-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.background-filter {  
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: #29293b8e;
+  backdrop-filter: blur(2px);
 }

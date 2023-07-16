@@ -55,14 +55,19 @@ sections.forEach((section) => {
 
 setTimeout(() => {
   //? MAIN PROJECTS HOVER EFFECT
-  const mainImageWrappers = document.querySelectorAll(".main-project-image");
+  const mainProjectImages = document.querySelectorAll(".main-project-image");
+  // const imageWrappers = document.querySelectorAll(".image-wrapper");
 
-  mainImageWrappers.forEach((wrapper) => {
+  mainProjectImages.forEach((wrapper) => {
     wrapper.addEventListener("mouseover", (e) => {
       e.target.previousElementSibling.classList.add("show-text");
+      e.target.offsetParent.style.opacity = "0.8";
+      e.target.offsetParent.style.zIndex = "1000";
+      console.dir(e.target);
     });
     wrapper.addEventListener("mouseout", (e) => {
       e.target.previousElementSibling.classList.remove("show-text");
+      e.target.offsetParent.style.opacity = "1";
     });
   });
 
@@ -103,49 +108,49 @@ backgroundFilter.addEventListener("click", () => {
 });
 
 //? PRE-FOOTER EXTRA INFO
-const footerCta = document.querySelectorAll(".pre-footer-cta");
+// const footerCta = document.querySelectorAll(".pre-footer-cta");
 
-footerCta.forEach((cta) => {
-  cta.addEventListener("click", (e) => {
-    sidePanel.classList.add("show-panel");
-    backgroundFilter.style.display = "block";
-    document.body.style.overflowY = "hidden";
-    const dataset = e.target.dataset.extra;
+// footerCta.forEach((cta) => {
+//   cta.addEventListener("click", (e) => {
+//     sidePanel.classList.add("show-panel");
+//     backgroundFilter.style.display = "block";
+//     document.body.style.overflowY = "hidden";
+//     const dataset = e.target.dataset.extra;
 
-    if (dataset === undefined) {
-      sidePanel.classList.remove("show-panel");
-      backgroundFilter.style.display = "none";
-      document.body.style.overflowY = "";
-    }
+//     if (dataset === undefined) {
+//       sidePanel.classList.remove("show-panel");
+//       backgroundFilter.style.display = "none";
+//       document.body.style.overflowY = "";
+//     }
 
-    switch (dataset) {
-      case "uses":
-        sidePanelInfo.innerHTML = uses;
-        break;
-      case "experience":
-        sidePanelInfo.innerHTML = experience;
-        break;
-      default:
-        sidePanelInfo.innerHTML = "";
-        break;
-    }
-  });
-});
+//     switch (dataset) {
+//       case "uses":
+//         sidePanelInfo.innerHTML = uses;
+//         break;
+//       case "experience":
+//         sidePanelInfo.innerHTML = experience;
+//         break;
+//       default:
+//         sidePanelInfo.innerHTML = "";
+//         break;
+//     }
+//   });
+// });
 
 //? CONTACT FORM
-const contactForm = document.querySelector("#contact-form");
-const formSubmittedMessage = document.querySelector(".form-submitted-message");
+// const contactForm = document.querySelector("#contact-form");
+// const formSubmittedMessage = document.querySelector(".form-submitted-message");
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// contactForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
-  formSubmittedMessage.style.opacity = 1;
-  formSubmittedMessage.classList.add("form-submission-success");
-  setTimeout(() => {
-    formSubmittedMessage.style.opacity = 0;
-    contactForm.reset();
-  }, 2000);
-  setTimeout(() => {
-    formSubmittedMessage.classList.remove("form-submission-success");
-  }, 3000);
-});
+//   formSubmittedMessage.style.opacity = 1;
+//   formSubmittedMessage.classList.add("form-submission-success");
+//   setTimeout(() => {
+//     formSubmittedMessage.style.opacity = 0;
+//     contactForm.reset();
+//   }, 2000);
+//   setTimeout(() => {
+//     formSubmittedMessage.classList.remove("form-submission-success");
+//   }, 3000);
+// });

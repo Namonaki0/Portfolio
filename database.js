@@ -57,10 +57,9 @@ async function getProjectInfo(projects) {
     for (const value of tech[i]) {
       val += `                        
         <iconify-icon
-          icon="bxl:${value}"
+          icon="${value}"
           width="40"
           height="40"
-          title="${value}"
           class="${value}-icon"
         ></iconify-icon>
       `;
@@ -81,7 +80,7 @@ async function getProjectInfo(projects) {
                       <span class="main-project-span">EXPLORE</span>
                       <img
                         src="${project.image}"
-                        alt="movie library still picture"
+                        alt="project image"
                         class="project-image"
                       />
                     </a>
@@ -95,7 +94,6 @@ async function getProjectInfo(projects) {
                     </span>
                     <div class="project-technologies">
                       ${val}
-      
                     </div>
                     <a
                       class="code-link"

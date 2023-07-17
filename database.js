@@ -41,34 +41,25 @@ projectsRef.on("value", (snapshot) => {
   };
 
 async function getProjectInfo(projects) {
-  const tech = [];
+  for (const project of Object.values(projects)) {
+    if (project.name && project.type) {
+      let techIcons = "";
 
-  projects.map((p) => {
-    if (p.hasOwnProperty("technologies")) {
-      tech.push(Object.values(p.technologies));
-    }
-  });
+      for (let i = 0; i < project.technologies?.length; i++) {
+        techIcons += `                        
+          <iconify-icon
+            icon="${project.technologies[i]}"
+            width="40"
+            height="40"
+            class="${project.technologies[i]}-icon"
+          ></iconify-icon>
+        `;
+      }
 
-  const projectInfo = projects.map((p) => p);
-
-  projectInfo.forEach((project, i) => {
-    let val = "";
-
-    for (const value of tech[i]) {
-      val += `                        
-        <iconify-icon
-          icon="${value}"
-          width="40"
-          height="40"
-          class="${value}-icon"
-        ></iconify-icon>
-      `;
-    }
-
-    if (project.type === "main") {
-      loadingAnimation.style.display = "none";
-      mainProjects.style.opacity = 1;
-      mainProjects.innerHTML += `
+      if (project.type === "main") {
+        loadingAnimation.style.display = "none";
+        mainProjects.style.opacity = 1;
+        mainProjects.innerHTML += `
               <div class="project main-project">
                   <div class="image-wrapper main-project-image">
                     <a
@@ -93,7 +84,7 @@ async function getProjectInfo(projects) {
                       ${project.highlights}
                     </span>
                     <div class="project-technologies">
-                      ${val}
+                      ${techIcons}
                     </div>
                     <a
                       class="code-link"
@@ -106,8 +97,9 @@ async function getProjectInfo(projects) {
                   </div>
               </div>
           `;
+      }
     }
-  });
+  }
 }
 
 setTimeout(() => {
@@ -116,4 +108,4 @@ setTimeout(() => {
 
   mainProject.forEach((p) => (p.style.opacity = 1));
   projectImage.forEach((p) => (p.style.opacity = 1));
-}, 2500);
+}, 2000);

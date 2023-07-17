@@ -56,18 +56,15 @@ sections.forEach((section) => {
 setTimeout(() => {
   //? MAIN PROJECTS HOVER EFFECT
   const mainProjectImages = document.querySelectorAll(".main-project-image");
-  // const imageWrappers = document.querySelectorAll(".image-wrapper");
 
   mainProjectImages.forEach((wrapper) => {
     wrapper.addEventListener("mouseover", (e) => {
       e.target.previousElementSibling.classList.add("show-text");
-      e.target.offsetParent.style.opacity = "0.8";
-      e.target.offsetParent.style.zIndex = "1000";
-      console.dir(e.target);
+      e.target.style.opacity = "0.3";
     });
     wrapper.addEventListener("mouseout", (e) => {
       e.target.previousElementSibling.classList.remove("show-text");
-      e.target.offsetParent.style.opacity = "1";
+      e.target.style.opacity = "1";
     });
   });
 

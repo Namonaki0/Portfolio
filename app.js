@@ -1,5 +1,3 @@
-import { uses, experience } from "/extra/uses.js";
-
 //? MENU SCROLL EFFECT
 const header = document.querySelector("header");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -102,6 +100,15 @@ backgroundFilter.addEventListener("click", () => {
   sidePanel.classList.remove("show-panel");
   backgroundFilter.style.display = "none";
   document.body.style.overflowY = "";
+});
+
+//? RESUME DOWNLOAD
+const resume = document.querySelector(".resume");
+
+resume.addEventListener("click", (e) => {
+  const resumeLink = e.target.lastElementChild;
+
+  resumeLink.click();
 });
 
 //? PRE-FOOTER EXTRA INFO

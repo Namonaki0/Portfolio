@@ -218,8 +218,8 @@ h2 {
   }
 
   .nav-link {
-  margin: 1.5rem 0rem;
-}
+    margin: 1.5rem 0rem;
+  }
 }
 
 /*? PROFILE */
@@ -378,6 +378,85 @@ iconify-icon.speech-mark-right {
     transform: translateX(0);
   }
 }
+
+.resume {
+  all: unset;
+  margin-bottom: 0.5rem;
+  margin-top: -10px;
+  cursor: pointer;
+  transition: all 100ms linear;
+  border-bottom: 2px solid white;
+      overflow: hidden;
+}
+
+.resume:hover .download-arrow {
+  animation: downloadArrowEffect .5s linear alternate infinite;
+}
+
+.resume .resume-cta {
+  display: none;
+  margin-left: 0.5rem;
+  pointer-events: none;
+}
+
+.download-arrow {
+  transform: translateY(5px);
+  pointer-events: none;
+}
+
+
+@media (min-width: 1228px) {
+  .resume { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 1rem 0.5rem;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+    border: 1px solid rgba(148, 148, 148, 0.384);
+    cursor: pointer;
+    transition: all 100ms linear;
+  }
+
+  .resume:hover {
+    background: var(--defaultColor);
+    color: var(--miniProjects);
+  }
+
+    .resume .resume-cta {
+  display: block;
+  margin-left: 0.5rem;
+  font-size: medium;
+}
+
+  .resume .resume-cta-hidden {
+  display: initial;
+  margin-left: 0.5rem;
+}
+
+  .resume:hover > .resume-cta {
+    color: var(--miniProjects);
+  }
+
+  .resume .download-arrow {
+    display: block;
+    transform: translateY(0px);
+    transition: all 150ms linear;
+  }
+}
+
+@keyframes downloadArrowEffect {
+  0% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
 
 /*? --- PROFILE - TABLET --- */
 
@@ -957,7 +1036,7 @@ h1::after {
 
 .nuxt-tech-icon,
 .graphql-tech-icon,
-.mongo-db-tech-icon,
+.laravel-tech-icon,
 .typescript-tech-icon {
   transition: all 100ms linear;
 }
@@ -970,8 +1049,8 @@ h1::after {
   color: #00bb87;
 }
 
-.mongo-db-tech-icon:hover {
-  color: #3f8e41;
+.laravel-tech-icon:hover {
+  color: #F72C1F;
 }
 
 .typescript-tech-icon:hover {

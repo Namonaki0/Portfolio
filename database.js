@@ -14,7 +14,6 @@ let firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let projectsRef = firebase.database().ref("projects");
-let imagesRef = firebase.storage().ref("images/");
 
 const mainProjects = document.querySelector("#main-projects");
 const loadingAnimation = document.querySelector(".loading-animation");
@@ -40,7 +39,7 @@ projectsRef.on("value", (snapshot) => {
     console.error("Error: " + err.code);
   };
 
-async function getProjectInfo(projects) {
+function getProjectInfo(projects) {
   for (const project of Object.values(projects)) {
     if (project.name && project.type) {
       let techIcons = "";

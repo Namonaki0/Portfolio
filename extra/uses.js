@@ -63,6 +63,15 @@ const uses = `
               ></iconify-icon>
               <p>Firebase's Realtime database used for data storage</p>
             </div>
+            <div class="uses-style">
+              <iconify-icon
+                icon="logos:google-analytics"
+                width="50"
+                title="google-analytics"
+                class="uses-icon"
+              ></iconify-icon>
+              <p>Google Analytics used for user traffic</p>
+            </div>
           </div>
         </section>
     `;

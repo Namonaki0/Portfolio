@@ -6,6 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TPHPN682R6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TPHPN682R6");
+    </script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link
       rel="icon"
@@ -210,7 +225,7 @@
                 >
                   <a
                     class="resume-cta-hidden"
-                    href="./public/Andre_Ferreira_Frontend_Dev_Resume.pdf"
+                    href="./public/Andre Ferreira - Frontend Dev 2023.pdf"
                     download
                   >
                     Resume</a
@@ -218,7 +233,7 @@
                 </iconify-icon>
                 <a
                   class="resume-cta"
-                  href="./public/Andre_Ferreira_Frontend_Dev_Resume.pdf"
+                  href="./public/Andre Ferreira - Frontend Dev 2023.pdf"
                   download
                 >
                   Resume</a
@@ -476,6 +491,15 @@
     </div>
 
     <!-- PRE-FOOTER -->
+    <!-- <div class="pre-footer">
+      <div class="pre-footer-ctas">
+        <button class="pre-footer-cta">Portfolio</button>
+        <button class="pre-footer-cta" data-extra="uses">Uses</button>
+        <button class="pre-footer-cta" data-extra="challenges">
+          Frontend Challenges
+        </button>
+      </div>
+    </div> -->
     <!--? FOOTER -->
     <footer>
       <div class="sub-footer">
@@ -489,21 +513,26 @@
           target="_blank"
           rel="noreferrer"
           class="github"
-          ><i class="fab fa-github"></i
+          ><i class="fab fa-github" title="Github"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/andre-ferreira-37835b53/"
           target="_blank"
           rel="noreferrer"
           class="linkedin"
-          ><i class="fab fa-linkedin"></i
+          ><i class="fab fa-linkedin" title="LinkedIn"></i
         ></a>
         <a
-          href="https://codepen.io/AndreFRFerreira/pens/public"
+          href="https://www.frontendmentor.io/profile/Namonaki0"
           target="_blank"
           rel="noreferrer"
-          class="codepen"
-          ><i class="fab fa-codepen"></i
+          class="frontend mentor"
+        >
+          <iconify-icon
+            icon="simple-icons:frontendmentor"
+            width="28"
+            title="Frontend Mentor"
+          ></iconify-icon
         ></a>
       </div>
     </footer>
@@ -516,7 +545,16 @@
       ></iconify-icon>
       <div class="side-panel-info"></div>
     </div>
-    <div class="background-filter"></div>
+    <div class="background-filter">
+      <span class="close-span">
+        CLOSE
+        <iconify-icon
+          icon="ri:arrow-right-double-fill"
+          width="30"
+          title="close"
+        ></iconify-icon>
+      </span>
+    </div>
     <script
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"
@@ -534,8 +572,8 @@
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"
     ></script>
 
-    <script defer src="app.js" type="module"></script>
     <script defer src="database.js" type="module"></script>
+    <script defer src="app.js" type="module"></script>
     <script defer src="extra/uses.js" type="module"></script>
   </body>
 </html>

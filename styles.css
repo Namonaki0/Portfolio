@@ -197,10 +197,6 @@ h2 {
     padding: 0 1rem;
   }
 
-  .logo {
-    /* font-size: 5rem; */
-  }
-
   .nav-link-cta {
     padding: 2rem 1.6rem;
   }
@@ -386,11 +382,11 @@ iconify-icon.speech-mark-right {
   cursor: pointer;
   transition: all 100ms linear;
   border-bottom: 2px solid white;
-      overflow: hidden;
+  overflow: hidden;
 }
 
 .resume:hover .download-arrow {
-  animation: downloadArrowEffect .5s linear alternate infinite;
+  animation: downloadArrowEffect 0.5s linear alternate infinite;
 }
 
 .resume .resume-cta {
@@ -404,9 +400,8 @@ iconify-icon.speech-mark-right {
   pointer-events: none;
 }
 
-
 @media (min-width: 1228px) {
-  .resume { 
+  .resume {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,16 +421,16 @@ iconify-icon.speech-mark-right {
     color: var(--miniProjects);
   }
 
-    .resume .resume-cta {
-  display: block;
-  margin-left: 0.5rem;
-  font-size: medium;
-}
+  .resume .resume-cta {
+    display: block;
+    margin-left: 0.5rem;
+    font-size: medium;
+  }
 
   .resume .resume-cta-hidden {
-  display: initial;
-  margin-left: 0.5rem;
-}
+    display: initial;
+    margin-left: 0.5rem;
+  }
 
   .resume:hover > .resume-cta {
     color: var(--miniProjects);
@@ -456,7 +451,6 @@ iconify-icon.speech-mark-right {
     transform: translateY(5px);
   }
 }
-
 
 /*? --- PROFILE - TABLET --- */
 
@@ -735,6 +729,7 @@ h1::after {
 
 .show-text {
   opacity: 1;
+  z-index: 10;
   font-weight: 500;
   letter-spacing: 20px;
 }
@@ -797,33 +792,6 @@ h1::after {
 .project-technologies i:first-child {
   margin-left: 0;
 }
-
-/* .project-technologies .fa-html5 {
-  color: #e96227;
-}
-
-.project-technologies .fa-css3-alt {
-  color: #659ad2;
-}
-
-.project-technologies .fa-js {
-  color: #efd81d;
-}
-
-.project-technologies .fa-sass {
-  color: #c76494;
-}
-
-.project-technologies .fa-mailchimp {
-  color: rgba(255, 255, 255, 0.925);
-}
-
-.project-technologies .fa-react {
-  color: #5ed3f3;
-}
-.project-technologies .fa-twitter {
-  color: #4a94e3;
-} */
 
 .firebase-wrapper,
 .graphql-wrapper,
@@ -989,8 +957,8 @@ h1::after {
     text-align: center;
   }
 
-  .project {
-    min-width: 700px;
+  .main-project {
+    width: 100%;
   }
 }
 
@@ -1000,15 +968,8 @@ h1::after {
     padding: 0 6rem;
   }
 
-  .project {
-    min-width: 450px;
-    width: 450px;
-    flex: 1;
-  }
-
-  .main-project-three,
   .main-project {
-    min-width: 700px;
+    width: 100%;
   }
 }
 
@@ -1016,13 +977,20 @@ h1::after {
   .inner-main-projects {
     gap: 0 4rem;
   }
-  .project {
-    min-width: 550px;
+
+  .main-project {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .inner-main-projects {
+    gap: 0 4rem;
   }
 
-  .main-project-three,
   .main-project {
-    min-width: 700px;
+    width: 45%;
   }
 }
 
@@ -1050,7 +1018,7 @@ h1::after {
 }
 
 .laravel-tech-icon:hover {
-  color: #F72C1F;
+  color: #f72c1f;
 }
 
 .typescript-tech-icon:hover {
@@ -1494,10 +1462,6 @@ form textarea {
   background: green;
 }
 
-/* .form-name:required:invalid {
-      outline: 1px solid red;
-  } */
-
 @media (min-width: 900px) {
   .communication-wrapper {
     display: flex;
@@ -1534,28 +1498,22 @@ form textarea {
 /*? PRE-FOOTER */
 .pre-footer {
   font-size: large;
-  /* height: 250px; */
   text-align: center;
   padding: 4rem;
-  /* display: flex;
-    justify-content: space-evenly;
-    flex-direction: column; */
 }
 
-.pre-footer-title {
+/* .pre-footer-title {
   text-transform: uppercase;
 }
 
 .pre-footer > p {
-  /* font-style: italic; */
   margin-bottom: 2rem;
   text-align: left;
-}
+} */
 
 .pre-footer-ctas .pre-footer-cta {
   all: unset;
   font-size: small;
-  /* margin: auto; */
   margin-bottom: 1rem;
   padding-left: 0.8rem;
   border-left: 1px solid var(--highlight);
@@ -1718,4 +1676,63 @@ footer {
   inset: 0;
   background: #29293b8e;
   backdrop-filter: blur(2px);
+  cursor: pointer;
+  transition: all 50ms linear;
+}
+
+.background-filter:hover,
+.background-filter:focus {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: #29293b3d;
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+}
+
+.close-span {
+  visibility: hidden;
+}
+
+.background-filter span {
+  position: absolute;
+  transform: translate(-20%, 50%);
+  inset: 0;
+  font-size: 4rem;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+.revamping {
+  animation: revampingEffect 2s linear infinite;
+}
+
+.revamping::after {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  content: "revamping soon";
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: right;
+  padding: 2rem;
+  letter-spacing: 5px;
+    pointer-events: none;
+}
+
+@keyframes revampingEffect {
+  0% {
+    color: white;
+  }
+  50% {
+    color: var(--highlight);
+  }
+  100% {
+        color: white;
+  }
 }

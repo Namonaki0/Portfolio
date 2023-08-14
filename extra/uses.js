@@ -1,4 +1,4 @@
-const uses = `
+export const uses = `
         <div>
           <p>USES:</p>
         </div>
@@ -50,7 +50,7 @@ const uses = `
                 class="uses-icon"
               ></iconify-icon>
               <p>
-                Performance, SEO, accessibility and best practices tested with
+                Performance, SEO, Accessibility and best practices tested with
                 Lighthouse
               </p>
             </div>
@@ -61,7 +61,7 @@ const uses = `
                 title="firebase"
                 class="uses-icon"
               ></iconify-icon>
-              <p>Firebase's Realtime database used for data storage</p>
+              <p>Firebase's Realtime Database used for data storage</p>
             </div>
             <div class="uses-style">
               <iconify-icon
@@ -75,9 +75,3 @@ const uses = `
           </div>
         </section>
     `;
-
-const experience = `
-    test
-`;
-
-export { uses, experience };

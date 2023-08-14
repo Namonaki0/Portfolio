@@ -1,4 +1,4 @@
-import { uses } from "./extra/uses.js";
+// import { uses } from "./extra/uses.js";
 
 //? MENU SCROLL EFFECT
 const header = document.querySelector("header");
@@ -106,6 +106,15 @@ setTimeout(() => {
   });
 }, 2500);
 
+//? RESUME DOWNLOAD
+const resume = document.querySelector(".resume");
+
+resume.addEventListener("click", (e) => {
+  const resumeLink = e.target.lastElementChild;
+
+  resumeLink.click();
+});
+
 //? SIDE PANEL AND BACKGROUND FILTER
 // const usesBtn = document.querySelector(".uses-btn");
 // const sidePanel = document.querySelector(".side-panel");
@@ -125,15 +134,6 @@ setTimeout(() => {
 //   sidePanel.classList.remove("show-panel");
 //   backgroundFilter.style.display = "none";
 //   document.body.style.overflowY = "";
-// });
-
-// //? RESUME DOWNLOAD
-// const resume = document.querySelector(".resume");
-
-// resume.addEventListener("click", (e) => {
-//   const resumeLink = e.target.lastElementChild;
-
-//   resumeLink.click();
 // });
 
 //? PRE-FOOTER EXTRA INFO

@@ -493,9 +493,11 @@
     <!-- PRE-FOOTER -->
     <!-- <div class="pre-footer">
       <div class="pre-footer-ctas">
-        <button class="pre-footer-cta">Portfolio</button>
-        <button class="pre-footer-cta" data-extra="uses">Uses</button>
-        <button class="pre-footer-cta" data-extra="challenges">
+        <button class="pre-footer-cta" data-extra="uses" tabindex="0">
+          Uses
+        </button>
+        <button class="pre-footer-cta" tabindex="1">Portfolio</button>
+        <button class="pre-footer-cta" data-extra="challenges" tabindex="2">
           Frontend Challenges
         </button>
       </div>
@@ -536,7 +538,7 @@
         ></a>
       </div>
     </footer>
-    <div class="side-panel">
+    <!-- <div class="side-panel">
       <iconify-icon
         icon="ion:return-up-forward-sharp"
         width="30"
@@ -551,10 +553,11 @@
         <iconify-icon
           icon="ri:arrow-right-double-fill"
           width="30"
-          title="close"
+          title="close panel"
+          class="close-side-panel"
         ></iconify-icon>
       </span>
-    </div>
+    </div> -->
     <script
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"
@@ -574,7 +577,6 @@
 
     <script defer src="database.js" type="module"></script>
     <script defer src="app.js" type="module"></script>
-    <script defer src="extra/uses.js" type="module"></script>
   </body>
 </html>
 
